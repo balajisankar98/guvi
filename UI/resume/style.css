@@ -1,0 +1,179 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.mt-1{
+    margin-top: 10px;
+}
+.mt-2{
+    margin-top: 20px;
+}
+.mt-3{
+    margin-top: 30px;
+}
+
+.mb-2{
+    margin-bottom: 20px;
+}
+
+.mr-1{
+    margin-right: 10px;
+}
+
+.ml-1{
+    margin-left: 20px;
+}
+
+.ml-2{
+    margin-left: 20px;
+}
+
+.txt-right{
+    text-align: right;
+}
+
+.pd-3{
+    padding: 30px;
+}
+
+.pd-lr-3{
+    padding: 0px 30px;
+}
+
+.border-circle{
+    border: 2px solid white;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.end{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.bettween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.w-100{
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.page{
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.profile-img{
+    background-color: #9d4edd;
+    height: 400px;
+}
+
+.image{
+    width: 350px;
+    height: 350px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.profile-info{
+    background-color: #240046;
+    color: white;
+}
+
+
+.heading{
+    display: flex;
+    width: 100%;
+}
+
+.heading-content{
+    background-color: #312244;
+    color:white;
+    padding: 7px;
+    width: 70%;
+}
+
+.year{
+    color: #312244;
+}
+
+.arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 24px solid transparent;
+    border-bottom: 24px solid transparent; 
+    border-right:24px solid #312244; 
+    margin-left: auto;
+}
+
+.profile-contact{
+    background-color: #023e8a;
+}
+
+.white{
+    color: white;
+}
+
+.txt-center{
+    text-align: center;
+}
+
+.txt-left{
+    text-align: left;
+}
+
+.circle-shaded{
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    border-radius:50%;
+    margin-left: 10px;
+}
+
+.circle{
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    background-color: white;
+    border-radius:50%;
+    margin-left: 10px;
+}
+
+.half-shadded{
+  background-color: #023e8a;
+  width: 63%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.circle-content{
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius:50%;
+    padding: 13px 0px;
+    text-align: center;
+}
+
+.fnt-2{
+    font-size: 2em;
+}
