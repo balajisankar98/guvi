@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     box-sizing: border-box;
+    font-size: 18px;
 }
 
 .mt-1{
@@ -11,6 +12,10 @@
 }
 .mt-3{
     margin-top: 30px;
+}
+
+.mt-6{
+    margin-top: 60px;
 }
 
 .mb-2{
@@ -39,6 +44,17 @@
 
 .pd-lr-3{
     padding: 0px 30px;
+}
+
+.bg-gray{
+    background-color: gray;
+}
+
+.fnt-nrml{
+    font-weight: normal;
+}
+.profile-about{
+    background-color: white;
 }
 
 .border-circle{
@@ -88,8 +104,8 @@
 }
 
 .image{
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     background-color: #ffffff;
     border-radius: 50%;
 }
@@ -119,9 +135,10 @@
 .arrow-left {
     width: 0; 
     height: 0; 
-    border-top: 24px solid transparent;
-    border-bottom: 24px solid transparent; 
-    border-right:24px solid #312244; 
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent; 
+    border-right:25px solid #312244; 
+    margin-left: 2px;
     margin-left: auto;
 }
 
@@ -129,6 +146,9 @@
     background-color: #023e8a;
 }
 
+.fa-location-arrow{
+    padding: 7px;
+}
 .white{
     color: white;
 }
@@ -176,4 +196,28 @@
 
 .fnt-2{
     font-size: 2em;
+}
+@media only screen and (min-width: 901px) {
+  .page{
+      margin: 30px 0px;
+      width: 900px;
+  }
+  .profile{
+      width: 40%;
+      height: 450px;
+  }
+  .profile-info{
+      width: 60%;
+      height: 450px;
+      padding: 100px 70px;
+  }
+  .profile-about{
+    order: 1;
+    width: 60%;
+    height: 1011px;
+  }
+  .profile-contact{
+      width: 40%;
+      height: 1011px;
+  }
 }
