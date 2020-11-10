@@ -2,7 +2,7 @@
 var request = new XMLHttpRequest();
 
 //open the request
-request.open('GET','https://restcountries.eu/rest/v2/all',true);
+request.open('GET','https://restcountries.eu/rest/v2/all',false);
 
 
 //SEND REQUEST
@@ -16,3 +16,4 @@ request.onload = function() {
         console.log(`${country['name']}'s flag URL : ${country['flag']}`);
     }
 }
+console.log('hello')
