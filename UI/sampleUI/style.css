@@ -5,7 +5,7 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-size: 16px;
+    font-size: 17px;
     font-family:  'pt-sans-narrow' 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
@@ -23,7 +23,9 @@
 .flex-row{
     flex-direction: row;
 }
-
+.m-1{
+    margin: 10px;
+}
 .mt-1{
     margin-top: 10px;
 }
@@ -46,6 +48,10 @@
     margin-bottom: 20px;
 }
 
+.mb-5{
+    margin-bottom: 50px;
+}
+
 .mr-1{
     margin-right: 10px;
 }
@@ -64,6 +70,13 @@
 
 .pd-2{
     padding: 20px;
+}
+
+.pdlr-2{
+    padding: 0px 20px;
+}
+.pdtb-4{
+    padding: 40px 0px;
 }
 
 .text-center{
@@ -327,6 +340,74 @@
     right: 25px;
     text-decoration: none;
 }
+.btn{
+    background-color: #000;
+    color: white;
+    padding: 10px 40px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.btn:hover{
+    background-color: #f398a8;
+}
+
+.flex-column-start-responsive{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.boder-bottom{
+    padding-bottom: 70px;
+    border-bottom: 1px solid #ddd;
+}
+
+.form-text{
+    padding: 10px;
+    width: auto;
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.form-text-area{
+    padding: 10px;
+    width: auto;
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 20px;
+    border: none;
+}
+
+input:focus{
+    outline: none;
+    border: none;
+}
+
+.bg-grey{
+    background-color: #f1f1f1;
+}
+.btn-form{
+    background-color: #f73b56;
+}
+
+.social-icon{
+    border: 1px solid black;
+    border-radius: 50% ;
+    margin: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+}
+
+.border-white{
+    border: 10px solid white;
+}
 
 @media only screen and (min-width: 760px) {
     .icon-label{
@@ -383,6 +464,18 @@
     }
     .image-box{
         width: 33%;
+    }
+    .flex-column-start-responsive{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .btn{
+        margin-top: 20px;
+        width: 200px;
+    }
+    .btn-form{
+        width: auto;
+        margin-top: 0px;
     }
 }
 
