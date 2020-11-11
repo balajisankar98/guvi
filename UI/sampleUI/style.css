@@ -106,13 +106,13 @@
     margin: auto;
 }
 .absolute-header{
-    position: absolute;
+    position: fixed;
     z-index: 2;
     top: 0px;
+    background-color: #f3f3f3;
 }
 
 .nav-bar{
-    background-color: #f3f3f3;
     padding: 15px;
     display: flex;
     flex-direction: column;
