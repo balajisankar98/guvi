@@ -223,6 +223,7 @@
 
 .service-icon{
     font-size: 30px;
+    color: #f73b56;
 }
 
 .about-title{
@@ -311,7 +312,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #f9289cf7;
+    background-color:rgba(247,77,101);
     top: 0px;
     left: 0px;
     padding: 10px;
@@ -319,7 +320,7 @@
     transition: all .5s ease-out;
 }
 .image-box:hover .image_caption{
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 .image_caption h2{
