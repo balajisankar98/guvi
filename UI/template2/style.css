@@ -1,0 +1,86 @@
+.sidebar-content{
+    height: 100vh !important;
+    border: none;
+    border-radius: 0px;
+    overflow: auto;
+}
+
+.sidebar-dialog{
+    margin: 0px;
+    max-width: 75%;
+}
+
+.bg-header{
+    background-color: #2874f0;
+    color: white !important;
+}
+
+.bg-header a {
+    color: white;
+}
+
+
+.search-bar{
+    position: relative;
+}
+
+
+.search-bar::before {
+  position: absolute;
+  font-family: 'Font Awesome\ 5 Free';
+  top: 7px;
+  right: 20px;
+  content: "\f002";
+  font-weight: 900;
+  color: #2874f0;
+  background-color: white;
+  z-index: 4;
+}
+
+.dropdown-menu-custom{
+    left: -50px;
+}
+
+.dropdown-menu-custom::before{
+    position: absolute;
+    content: "";
+    background-color: inherit;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    top:-5px;
+    transform: rotate(45deg);
+}
+
+.shopping-cart-count{
+    position: absolute;
+    top:-8px;
+    left: 9px;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    background-color: #ff6161;
+    border-radius: 50%;
+    font-size: 12px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.logo-img{
+    margin-top: 5px;
+    background-image: url("images/flipkart-logo.webp");
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 30px;
+    background-size: contain;
+}
+
+@media (max-width: 768px){
+    .logo-img{
+        background-image: url("images/logo-lite.webp");
+        width: 85px;
+    }
+}

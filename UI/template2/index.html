@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../bootstrap-5.0.0-alpha3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/flipkart-favicon.ico"/>
+    <script src="../../bootstrap-5.0.0-alpha3-dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <title>Flipkart</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark  bg-primary">
+      <div class="container-lg">
+          <div class="col-sm-11 m-auto row flex-md-nowrap">
+            <a type="button" class="btn bg-primary col-auto d-md-none text-light p-1 border-0" data-toggle="modal" data-target="#exampleModal">
+              <i class="fas fa-bars"></i>
+            </a>
+            <a class="navbar-brand fw-bolder col-auto mr-0 logo-img ml-2" href="#"> 
+            </a>
+            <div class="col-md-5 col-12 search-bar order-md-0 order-last mt-2 mt-md-0">
+              <input type="text" class="form-control text-truncate pr-4" placeholder="Search for products brands and more">
+            </div>
+            <div class="col-auto dropdown ml-auto">
+              <a class="nav-link dropdown-toggle text-light fw-bold py-2 px-0" href="#" id="profileLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                <span class="d-none d-md-inline">Balaji</span>
+                <i class="fas fa-user-circle d-inline d-md-none"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-custom shadow" aria-labelledby="profileLink">
+                <li><a class="dropdown-item border-bottom p-2 " href="#">
+                  <i class="fas fa-user-circle pr-2 text-primary"></i>My Profile</a>
+                </li>
+                <li><a class="dropdown-item border-bottom p-2" href="#">
+                    <i class="fas fa-comment-alt pr-2 text-primary"></i>My Chats</a>
+                </li>
+                <li><a class="dropdown-item border-bottom p-2 d-flex align-items-center" href="#">
+                  <i class="fas fa-heart pr-2 text-primary"></i>Whishlist
+                  <span class="ml-auto badge bg-secondary">9</span></a>
+                  
+                </li>
+                <li><a class="dropdown-item p-2" href="#">
+                  <i class="fas fa-power-off pr-2 text-primary"></i>Sign out</a>
+                </li>  
+              </ul>
+            </div>
+            <div class="col-auto dropdown">
+              <a class="nav-link dropdown-toggle text-light fw-bold py-2 px-0 d-none d-md-block" href="#" id="moreLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                More
+              </a>
+              <a class="nav-link text-light fw-bold py-2 px-0 d-block d-md-none" href="#">
+                <i class="fas fa-plus-square"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-custom shadow" aria-labelledby="moreLink">
+                <li><a class="dropdown-item border-bottom p-2 " href="#">
+                  <i class="fas fa-bell pr-2 text-primary"></i>Notification Preference</a>
+                </li>
+                <li><a class="dropdown-item border-bottom p-2" href="#">
+                    <i class="fas fa-briefcase pr-2 text-primary"></i>Sell on Flipcart</a>
+                </li>
+                <li><a class="dropdown-item border-bottom p-2" href="#">
+                  <i class="fas fa-question-circle pr-2 text-primary"></i>24 x 7 Customer service</a>
+                </li>
+                <li><a class="dropdown-item p-2" href="#">
+                  <i class="fas  fa-cloud-download-alt pr-2 text-primary"></i>Download App</a>
+                </li>  
+              </ul>
+            </div>
+            <div class="col-auto">
+              <a class="nav-link  text-light fw-bold py-2 px-0 " href="#" id="moreLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                <span class="pr-2 position-relative ">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span class="shopping-cart-count">1</span>
+                </span> <span class="d-none d-md-inline">Cart </span> 
+              </a>
+              
+            </div>
+          </div>
+      </div>
+    </nav>
+    <div class="navbar bg-transparent border-bottom p-0">
+      <div class="container-lg">
+        <div class="col-sm-11 m-auto flex-nowrap d-none d-md-flex row col-form-label-sm position-relative">
+          <div class="col-auto">
+            <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label electronicsLink" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Electronics
+            </a>
+            <div class="dropdown-menu p-0 shadow col-12" aria-labelledby="electronicsLink">
+              <div class="col-12 d-flex">
+                <div class="col-3 bg-light p-2">
+                  <ul class="list-unstyled">
+                    <li>
+                     <a class="nav-link text-secondary px-0" href="#"><i class="fas fa-user-circle pr-2 text-secondary"></i>My Profile</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-comment-alt pr-2 text-secondary"></i>My Chats</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0"><i class="fas fa-heart pr-2 text-secondary"></i>More on flipkart
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-bell pr-2 text-secondary"></i>Notification Preference</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-briefcase pr-2 text-secondary"></i>Sell on Flipcart</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-question-circle pr-2 text-secondary"></i>24 x 7 Customer service</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0"><i class="fas  fa-cloud-download-alt pr-2 text-secondary"></i>Download App</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0"><i class="fas fa-heart pr-2 text-secondary"></i>More on flipkart
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-bell pr-2 text-secondary"></i>Notification Preference</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Legal</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Help</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Notification preferances</a></li>
+                  </ul>
+                </div>
+                <div class="col-3 bg-transparent p-2">
+                  <ul class="list-unstyled">
+                    <li>
+                     <a class="nav-link text-secondary px-0" href="#"><i class="fas fa-user-circle pr-2 text-secondary"></i>My Profile</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-comment-alt pr-2 text-secondary"></i>My Chats</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0"><i class="fas fa-heart pr-2 text-secondary"></i>More on flipkart
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-bell pr-2 text-secondary"></i>Notification Preference</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-briefcase pr-2 text-secondary"></i>Sell on Flipcart</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-question-circle pr-2 text-secondary"></i>24 x 7 Customer service</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0"><i class="fas  fa-cloud-download-alt pr-2 text-secondary"></i>Download App</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0"><i class="fas fa-heart pr-2 text-secondary"></i>More on flipkart
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-bell pr-2 text-secondary"></i>Notification Preference</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Legal</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Help</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Notification preferances</a></li>
+                  </ul>
+                </div>
+                <div class="col-3 bg-light p-2">
+                  <ul class="list-unstyled">
+                    <li>
+                     <a class="nav-link text-secondary px-0" href="#"><i class="fas fa-user-circle pr-2 text-secondary"></i>My Profile</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-comment-alt pr-2 text-secondary"></i>My Chats</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0"><i class="fas fa-heart pr-2 text-secondary"></i>More on flipkart
+                     </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-bell pr-2 text-secondary"></i>Notification Preference</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-briefcase pr-2 text-secondary"></i>Sell on Flipcart</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-question-circle pr-2 text-secondary"></i>24 x 7 Customer service</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0"><i class="fas  fa-cloud-download-alt pr-2 text-secondary"></i>Download App</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0"><i class="fas fa-heart pr-2 text-secondary"></i>More on flipkart
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-bell pr-2 text-secondary"></i>Notification Preference</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Legal</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Help</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Notification preferances</a></li>
+                  </ul>
+                </div>
+                <div class="col-3 bg-transparent p-2">
+                  <ul class="list-unstyled">
+                    <li>
+                     <a class="nav-link text-secondary px-0" href="#"><i class="fas fa-user-circle pr-2 text-secondary"></i>My Profile</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-comment-alt pr-2 text-secondary"></i>My Chats</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0"><i class="fas fa-heart pr-2 text-secondary"></i>More on flipkart
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-bell pr-2 text-secondary"></i>Notification Preference</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-briefcase pr-2 text-secondary"></i>Sell on Flipcart</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-question-circle pr-2 text-secondary"></i>24 x 7 Customer service</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0"><i class="fas  fa-cloud-download-alt pr-2 text-secondary"></i>Download App</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0"><i class="fas fa-heart pr-2 text-secondary"></i>More on flipkart
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-bell pr-2 text-secondary"></i>Notification Preference</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Legal</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Help</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Notification preferances</a></li>
+                  </ul>
+                </div>
+              </div> 
+            </div>
+          </div>
+          <div class="col-auto">
+            <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label electronicsLink" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              TV & Appliances
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog sidebar-dialog">
+        <div class="modal-content sidebar-content">
+          <div class="modal-header bg-primary text-light p-2">
+            <h6 class="modal-title" id="exampleModalLabel">Balaji Sankar</h6>
+            <img src="images/sidebar-logo.webp" width="20px">
+          </div>
+          <div class="modal-body p-0">
+            <ul class="list-group p-2 ">
+              <li class="list-item">
+               <a class="nav-link text-secondary px-0" href="#"><i class="fas fa-user-circle pr-2 text-secondary"></i>My Profile</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-comment-alt pr-2 text-secondary"></i>My Chats</a>
+              </li>
+              <hr>
+              <li><a href="#" class="nav-link text-secondary px-0"><i class="fas fa-heart pr-2 text-secondary"></i>More on flipkart
+                <span class="ml-auto badge bg-danger">NEW</span></a></li>
+              <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-bell pr-2 text-secondary"></i>Notification Preference</a></li>
+              <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-briefcase pr-2 text-secondary"></i>Sell on Flipcart</a></li>
+              <hr>
+              <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-question-circle pr-2 text-secondary"></i>24 x 7 Customer service</a></li>
+              <li><a href="#" class="nav-link text-secondary px-0"><i class="fas  fa-cloud-download-alt pr-2 text-secondary"></i>Download App</a></li>
+              <li><a href="#" class="nav-link text-secondary px-0"><i class="fas fa-heart pr-2 text-secondary"></i>More on flipkart
+                <span class="ml-auto badge bg-danger">NEW</span></a></li>
+              <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-bell pr-2 text-secondary"></i>Notification Preference</a></li>
+              <hr>
+              <li> <a href="#" class="nav-link text-secondary px-0">Legal</a></li>
+              <li> <a href="#" class="nav-link text-secondary px-0">Help</a></li>
+              <li> <a href="#" class="nav-link text-secondary px-0">Notification preferances</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</body>
+</html>
