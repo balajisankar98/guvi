@@ -10,6 +10,16 @@
     max-width: 75%;
 }
 
+.modal.fade .modal-dialog {
+    transition: transform 0.5s ease-out;
+    transform: translate(-50px, 0);
+}
+
+
+.modal.show .sidebar-dialog {
+    transform: none;
+}
+
 .bg-header{
     background-color: #2874f0;
     color: white !important;
@@ -71,16 +81,24 @@
 
 .logo-img{
     margin-top: 5px;
-    background-image: url("images/flipkart-logo.webp");
+    background-image: url("images/fk-logo.png");
     background-repeat: no-repeat;
     width: 100px;
     height: 30px;
     background-size: contain;
 }
 
+.scrollbar-none::-webkit-scrollbar{
+    display: none;
+}
+
+.scrollbar-none {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 @media (max-width: 768px){
     .logo-img{
-        background-image: url("images/logo-lite.webp");
         width: 85px;
     }
 }
