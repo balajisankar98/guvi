@@ -1242,6 +1242,10 @@
   visibility: hidden !important;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 @media (min-width: 576px) {
   .float-sm-left {
     float: left !important;
@@ -1894,6 +1898,10 @@
   }
 }
 @media (min-width: 768px) {
+  .visible-md {
+    visibility: visible !important;
+  }
+
   .float-md-left {
     float: left !important;
   }

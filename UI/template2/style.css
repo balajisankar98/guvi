@@ -37,7 +37,7 @@
 
 .search-bar::before {
   position: absolute;
-  font-family: 'Font Awesome\ 5 Free';
+  font-family: 'Font Awesome 5 Pro';
   top: 7px;
   right: 20px;
   content: "\f002";
@@ -97,8 +97,18 @@
     scrollbar-width: none;  /* Firefox */
 }
 
+.carousel-control-custom{
+    height: 90px;
+    width: 50px;
+    background-color: white;
+    opacity: 1;
+    margin: auto;
+}
+
 @media (max-width: 768px){
     .logo-img{
         width: 85px;
     }
+    
 }
+

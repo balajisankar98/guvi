@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
+    crossorigin="anonymous"/>
     <link rel="stylesheet" href="../../bootstrap-5.0.0-alpha3-dist/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/flipkart-favicon.ico"/>
@@ -13,833 +16,1355 @@
     <title>Flipkart</title>
 </head>
 <body class="bg-light">
-    <nav class="navbar navbar-expand-md navbar-dark  bg-primary">
-      <div class="container-lg">
-          <div class="col-12 col-md-11 m-auto row flex-md-nowrap">
-            <a type="button" class="btn bg-primary col-auto d-md-none text-light p-1 border-0" data-toggle="modal" data-target="#exampleModal">
-              <i class="fas fa-bars"></i>
+  <nav class="navbar navbar-expand-md navbar-dark  bg-primary">
+    <div class="container-lg">
+        <div class="col-12 col-md-11 m-auto row flex-md-nowrap">
+          <a type="button" class="btn bg-primary col-auto d-md-none text-light p-1 border-0" data-toggle="modal" data-target="#sidebarModel">
+            <i class="fas fa-bars"></i>
+          </a>
+          <a class="navbar-brand fw-bolder col-auto mr-0 logo-img ml-2" href="#"> 
+          </a>
+          <div class="col-md-5 col-12 search-bar order-md-0 order-last mt-2 mt-md-0">
+            <input type="text" class="form-control text-truncate pr-4" placeholder="Search for products brands and more">
+          </div>
+          <div class="col-auto dropdown ml-auto">
+            <a class="nav-link dropdown-toggle text-light fw-bold py-2 px-0" href="#" id="profileLink" role="button" data-toggle="dropdown" aria-expanded="false">
+              <span class="d-none d-md-inline">Balaji</span>
+              <i class="fas fa-user-circle d-inline d-md-none"></i>
             </a>
-            <a class="navbar-brand fw-bolder col-auto mr-0 logo-img ml-2" href="#"> 
+            <ul class="dropdown-menu dropdown-menu-custom shadow" aria-labelledby="profileLink">
+              <li><a class="dropdown-item border-bottom p-2 " href="#">
+                <i class="fas fa-user-circle pr-2 text-primary"></i>My Profile</a>
+              </li>
+              <li><a class="dropdown-item border-bottom p-2" href="#">
+                  <i class="fas fa-comment-alt pr-2 text-primary"></i>My Chats</a>
+              </li>
+              <li><a class="dropdown-item border-bottom p-2 d-flex align-items-center" href="#">
+                <i class="fas fa-heart pr-2 text-primary"></i>Whishlist
+                <span class="ml-auto badge bg-secondary">9</span></a>
+                
+              </li>
+              <li><a class="dropdown-item p-2" href="#">
+                <i class="fas fa-power-off pr-2 text-primary"></i>Sign out</a>
+              </li>  
+            </ul>
+          </div>
+          <div class="col-auto dropdown">
+            <a class="nav-link dropdown-toggle text-light fw-bold py-2 px-0 d-none d-md-block" href="#" id="moreLink" role="button" data-toggle="dropdown" aria-expanded="false">
+              More
             </a>
-            <div class="col-md-5 col-12 search-bar order-md-0 order-last mt-2 mt-md-0">
-              <input type="text" class="form-control text-truncate pr-4" placeholder="Search for products brands and more">
+            <a class="nav-link text-light fw-bold py-2 px-0 d-block d-md-none" href="#">
+              <i class="fas fa-plus-square"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-custom shadow" aria-labelledby="moreLink">
+              <li><a class="dropdown-item border-bottom p-2 " href="#">
+                <i class="fas fa-bell pr-2 text-primary"></i>Notification Preference</a>
+              </li>
+              <li><a class="dropdown-item border-bottom p-2" href="#">
+                  <i class="fas fa-briefcase pr-2 text-primary"></i>Sell on Flipcart</a>
+              </li>
+              <li><a class="dropdown-item border-bottom p-2" href="#">
+                <i class="fas fa-question-circle pr-2 text-primary"></i>24 x 7 Customer service</a>
+              </li>
+              <li><a class="dropdown-item p-2" href="#">
+                <i class="fas  fa-cloud-download-alt pr-2 text-primary"></i>Download App</a>
+              </li>  
+            </ul>
+          </div>
+          <div class="col-auto">
+            <a class="nav-link  text-light fw-bold py-2 px-0 " href="#" id="moreLink" role="button" data-toggle="dropdown" aria-expanded="false">
+              <span class="pr-2 position-relative ">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="shopping-cart-count">1</span>
+              </span> <span class="d-none d-md-inline">Cart </span> 
+            </a>
+            
+          </div>
+        </div>
+    </div>
+  </nav>
+  <div class="navbar bg-white border-bottom p-0">
+    <div class="container-lg">
+      <div class="col-12 m-auto flex-nowrap d-none d-md-flex row col-form-label-sm position-relative mx-0 justify-content-evenly">
+        <div class="col-auto p-0">
+          <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label " id="electronicsLink" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Electronics
+          </a>
+          <div class="dropdown-menu p-0 shadow col-12" aria-labelledby="electronicsLink">
+            <div class="col-12 d-flex">
+              <div class="col-3 bg-light p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0 fw-bold" href="#">Lorem, ipsum.</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                  </li>
+                  <li><a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem, ipsum dolor.
+                    </a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li><a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem, ipsum dolor.
+                    </a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-transparent p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-light p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-transparent p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class="col-auto pr-0 pl-1">
+          <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label " id="tvAndAppliances" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            TV & Appliances
+          </a>
+          <div class="dropdown-menu p-0 shadow col-12" aria-labelledby="tvAndAppliances">
+            <div class="col-12 d-flex">
+              <div class="col-3 bg-transparent p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                  </li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                    </a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                    </a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit amet.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-light p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-transparent p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-light p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class="col-auto  pr-0 pl-1">
+          <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label " id="menLink" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Men
+          </a>
+          <div class="dropdown-menu p-0 shadow col-12" aria-labelledby="menLink">
+            <div class="col-12 d-flex">
+              <div class="col-3 bg-light p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                  </li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                    </a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                    </a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit amet.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-transparent p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-light p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-transparent p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class="col-auto  pr-0 pl-1">
+          <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label " id="womenLink" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Women
+          </a>
+          <div class="dropdown-menu p-0 shadow col-12" aria-labelledby="womenLink">
+            <div class="col-12 d-flex">
+              <div class="col-3 bg-transparent p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                  </li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                    </a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                    </a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-light p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-transparent p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-light p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class="col-auto  pr-0 pl-1">
+          <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label " id="babyLink" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Baby & Kids
+          </a>
+          <div class="dropdown-menu p-0 shadow col-12" aria-labelledby="babyLink">
+            <div class="col-12 d-flex">
+              <div class="col-3 bg-light p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                  </li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                    </a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                    </a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-transparent p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-light p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-transparent p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class="col-auto pr-0 pl-1">
+          <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label " id="furnitureLink" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Home & furniture
+          </a>
+          <div class="dropdown-menu p-0 shadow col-12" aria-labelledby="furnitureLink">
+            <div class="col-12 d-flex">
+              <div class="col-3 bg-transparent p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                  </li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                    </a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                    </a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-light p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-transparent p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-light p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class="col-auto  pr-0 pl-1">
+          <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label " id="sportsLink" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Sports & more
+          </a>
+          <div class="dropdown-menu p-0 shadow col-12" aria-labelledby="sportsLink">
+            <div class="col-12 d-flex">
+              <div class="col-3 bg-light p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                  </li>
+                  <li><a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem, ipsum dolor.
+                    </a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                    </a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                  <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-transparent p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-light p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+              <div class="col-3 bg-transparent p-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
+                    </li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0 fw-bold">Lorem ipsum dolor sit.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
+                      </a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
+                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
+                </ul>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class="col-auto  pr-0 pl-1">
+          <a class="nav-link text-dark fw-bold px-0 col-form-label">
+            Flights
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 d-flex flex-nowrap overflow-auto d-md-none p-1 scrollbar-none">
+    <img src="images/allcategroy.jpg" alt="" width="80px" height="80px">
+    <img src="images/offerZone.jpg" alt="" width="80px" height="80px">
+    <img src="images/appliances.jpg" alt="" width="80px" height="80px">
+    <img src="images/elctronics.jpg" alt="" width="80px" height="80px">
+    <img src="images/mobiles.jpg" alt="" width="80px" height="80px">
+    <img src="images/fashion.jpg" alt="" width="80px" height="80px">
+    <img src="images/grocery.jpg" alt="" width="80px" height="80px">
+    <img src="images/toys.jpg" alt="" width="80px" height="80px">
+    <img src="images/beauty.jpg" alt="" width="80px" height="80px">
+    <img src="images/flghts.jpg" alt="" width="80px" height="80px">
+  </div>
+  <div class="container-lg mt-2">
+    <div id="carouselControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <picture>
+            <source media="(max-width: 899px)" srcset="https://rukminim1.flixcart.com/flap/1080/480/image/eb67901bc5a05f2c.jpg?q=90 1x,
+                                                        https://rukminim1.flixcart.com/flap/1080/480/image/eb67901bc5a05f2c.jpg?q=90 2x">
+            <source media="(min-width: 900px)" srcset="https://rukminim1.flixcart.com/flap/1688/280/image/cbdb7d783ae97465.jpg?q=50">
+            <img src="https://rukminim1.flixcart.com/flap/1688/280/image/cbdb7d783ae97465.jpg?q=50" class="w-100 d-block">
+          </picture>
+        </div>
+        <div class="carousel-item">
+          <picture>
+            <source media="(max-width: 899px)" srcset="https://rukminim1.flixcart.com/flap/684/304/image/6dd7df509bbcf194.jpg?q=90 1x,
+                                                        https://rukminim1.flixcart.com/flap/684/304/image/6dd7df509bbcf194.jpg?q=90 2x">
+            <source media="(min-width: 900px)" srcset="https://rukminim1.flixcart.com/flap/3376/560/image/9e0ec6d4624738d9.jpg?q=50">
+            <img src="https://rukminim1.flixcart.com/flap/3376/560/image/9e0ec6d4624738d9.jpg?q=50" class="w-100 d-block">
+          </picture>
+        </div>
+        <div class="carousel-item">
+          <picture>
+            <source media="(max-width: 899px)" srcset="https://rukminim1.flixcart.com/flap/684/304/image/9ba314c896eebd44.jpg?q=90 1x,
+                                                      https://rukminim1.flixcart.com/flap/684/304/image/9ba314c896eebd44.jpg?q=90 2x">
+            <source media="(min-width: 900px)" srcset="https://rukminim1.flixcart.com/flap/3376/560/image/f8bf172316e22b0c.jpg?q=50">
+            <img src="https://rukminim1.flixcart.com/flap/3376/560/image/f8bf172316e22b0c.jpg?q=50" class="w-100 d-block">
+          </picture>
+        </div>
+        <div class="carousel-item">
+          <picture>
+            <source media="(max-width: 899px)" srcset="https://rukminim1.flixcart.com/flap/684/304/image/eebcf100a137481a.jpg?q=90 1x,
+                                                        https://rukminim1.flixcart.com/flap/684/304/image/eebcf100a137481a.jpg?q=90 2x">
+            <source media="(min-width: 900px)" srcset="https://rukminim1.flixcart.com/flap/3376/560/image/a8a0b4ae67df3855.jpg?q=50">
+            <img src="https://rukminim1.flixcart.com/flap/3376/560/image/a8a0b4ae67df3855.jpg?q=50" class="w-100 d-block">
+          </picture>
+        </div>
+      </div>
+      <a class="carousel-control-prev carousel-control-custom rounded-right d-none d-md-flex" href="#carouselControls" role="button" data-slide="prev">
+        <span class="fas fa-chevron-left  text-dark fs-4" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next carousel-control-custom rounded-left d-none d-md-flex" href="#carouselControls" role="button" data-slide="next">
+        <span class="fas fa-chevron-right text-dark fs-4" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+  </div>
+  <div class="container-lg mt-2 ">
+    <div class="row mx-0">
+      <div class="card shadow col">
+        <div class="card-body">
+          <div class="card-title d-flex justify-content-between border-bottom align-items-center">
+            <div class="col">
+              <h4 class="text-dark">Flipstart Deals Of The Day</h4>
+              <p class="text-secondary">Deals Refresh Every 8 Hours</p>
             </div>
-            <div class="col-auto dropdown ml-auto">
-              <a class="nav-link dropdown-toggle text-light fw-bold py-2 px-0" href="#" id="profileLink" role="button" data-toggle="dropdown" aria-expanded="false">
-                <span class="d-none d-md-inline">Balaji</span>
-                <i class="fas fa-user-circle d-inline d-md-none"></i>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-custom shadow" aria-labelledby="profileLink">
-                <li><a class="dropdown-item border-bottom p-2 " href="#">
-                  <i class="fas fa-user-circle pr-2 text-primary"></i>My Profile</a>
-                </li>
-                <li><a class="dropdown-item border-bottom p-2" href="#">
-                    <i class="fas fa-comment-alt pr-2 text-primary"></i>My Chats</a>
-                </li>
-                <li><a class="dropdown-item border-bottom p-2 d-flex align-items-center" href="#">
-                  <i class="fas fa-heart pr-2 text-primary"></i>Whishlist
-                  <span class="ml-auto badge bg-secondary">9</span></a>
-                  
-                </li>
-                <li><a class="dropdown-item p-2" href="#">
-                  <i class="fas fa-power-off pr-2 text-primary"></i>Sign out</a>
-                </li>  
-              </ul>
+            <button type="button" class="btn btn-primary h-100 w-auto">VIEW ALL</button>
+          </div>
+          <div class="row text-center flex-nowrap overflow-auto ">
+            <div class="col-auto tex p-2 cursor-pointer">
+              <img src="https://rukminim1.flixcart.com/image/150/150/kdt50nk0-0/kurta/g/l/p/m-greenhigh-stylum-original-imafumm7dgbdjkye.jpeg?q=70" alt="" 
+              srcset="https://rukminim1.flixcart.com/image/150/150/kdt50nk0-0/kurta/g/l/p/m-greenhigh-stylum-original-imafumm7dgbdjkye.jpeg?q=70 1x,
+                      https://rukminim1.flixcart.com/image/150/150/kdt50nk0-0/kurta/g/l/p/m-greenhigh-stylum-original-imafumm7dgbdjkye.jpeg?q=70 2x"
+                        height="150px">
+              <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+              <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+              <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+              
             </div>
-            <div class="col-auto dropdown">
-              <a class="nav-link dropdown-toggle text-light fw-bold py-2 px-0 d-none d-md-block" href="#" id="moreLink" role="button" data-toggle="dropdown" aria-expanded="false">
-                More
-              </a>
-              <a class="nav-link text-light fw-bold py-2 px-0 d-block d-md-none" href="#">
-                <i class="fas fa-plus-square"></i>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-custom shadow" aria-labelledby="moreLink">
-                <li><a class="dropdown-item border-bottom p-2 " href="#">
-                  <i class="fas fa-bell pr-2 text-primary"></i>Notification Preference</a>
-                </li>
-                <li><a class="dropdown-item border-bottom p-2" href="#">
-                    <i class="fas fa-briefcase pr-2 text-primary"></i>Sell on Flipcart</a>
-                </li>
-                <li><a class="dropdown-item border-bottom p-2" href="#">
-                  <i class="fas fa-question-circle pr-2 text-primary"></i>24 x 7 Customer service</a>
-                </li>
-                <li><a class="dropdown-item p-2" href="#">
-                  <i class="fas  fa-cloud-download-alt pr-2 text-primary"></i>Download App</a>
-                </li>  
-              </ul>
+            <div class="col-auto tex p-2 pl-4 cursor-pointer">
+              <img src="https://rukminim1.flixcart.com/image/150/150/jeokbrk0/collapsible-wardrobe/w/7/x/pp-1610-1-furn-central-grey-original-imaf3bny8gvsw4ae.jpeg?q=70" alt="" 
+              srcset="https://rukminim1.flixcart.com/image/150/150/jeokbrk0/collapsible-wardrobe/w/7/x/pp-1610-1-furn-central-grey-original-imaf3bny8gvsw4ae.jpeg?q=70 1x,
+              https://rukminim1.flixcart.com/image/150/150/jeokbrk0/collapsible-wardrobe/w/7/x/pp-1610-1-furn-central-grey-original-imaf3bny8gvsw4ae.jpeg?q=70 2x"
+                        height="150px">
+              <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+              <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+              <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+              
             </div>
-            <div class="col-auto">
-              <a class="nav-link  text-light fw-bold py-2 px-0 " href="#" id="moreLink" role="button" data-toggle="dropdown" aria-expanded="false">
-                <span class="pr-2 position-relative ">
-                  <i class="fas fa-shopping-cart"></i>
-                  <span class="shopping-cart-count">1</span>
-                </span> <span class="d-none d-md-inline">Cart </span> 
-              </a>
+            <div class="col-auto tex p-2 pl-4 cursor-pointer">
+              <img src="https://rukminim1.flixcart.com/image/150/150/jy4q3680/deodorant/z/n/a/200-hamilton-deodorant-spray-denver-men-original-imafgccjvqnngdze.jpeg?q=70" alt="" 
+              srcset="https://rukminim1.flixcart.com/image/150/150/jy4q3680/deodorant/z/n/a/200-hamilton-deodorant-spray-denver-men-original-imafgccjvqnngdze.jpeg?q=70 1x,
+              https://rukminim1.flixcart.com/image/150/150/jy4q3680/deodorant/z/n/a/200-hamilton-deodorant-spray-denver-men-original-imafgccjvqnngdze.jpeg?q=70 2x"
+                        height="150px">
+              <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+              <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+              <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+              
+            </div>
+            <div class="col-auto tex p-2 pl-4 cursor-pointer">
+              <img src="https://rukminim1.flixcart.com/image/150/150/juip0nk0/shoe/v/v/7/fcss19m-004-8-french-connection-black-original-imaffmxf3nhjgftj.jpeg?q=70" alt="" 
+              srcset="https://rukminim1.flixcart.com/image/150/150/juip0nk0/shoe/v/v/7/fcss19m-004-8-french-connection-black-original-imaffmxf3nhjgftj.jpeg?q=70 1x,
+              https://rukminim1.flixcart.com/image/150/150/juip0nk0/shoe/v/v/7/fcss19m-004-8-french-connection-black-original-imaffmxf3nhjgftj.jpeg?q=70 2x"
+                        height="150px">
+              <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+              <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+              <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+              
+            </div>
+            <div class="col-auto tex p-2 pl-4 cursor-pointer">
+              <img src="https://rukminim1.flixcart.com/image/150/150/k1jlyfk0/power-bank/p/h/n/xs10lpp-xs10lpp-flipkart-smartbuy-original-imafh37hxuy3zuzx.jpeg?q=70" alt="" 
+              srcset="https://rukminim1.flixcart.com/image/150/150/k1jlyfk0/power-bank/p/h/n/xs10lpp-xs10lpp-flipkart-smartbuy-original-imafh37hxuy3zuzx.jpeg?q=70 1x,
+              https://rukminim1.flixcart.com/image/150/150/k1jlyfk0/power-bank/p/h/n/xs10lpp-xs10lpp-flipkart-smartbuy-original-imafh37hxuy3zuzx.jpeg?q=70 2x"
+                        height="150px">
+              <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+              <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+              <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+              
+            </div>
+            <div class="col-auto tex p-2 pl-4 cursor-pointer">
+              <img src="https://rukminim1.flixcart.com/image/150/150/khjgeq80-0/shoe/n/c/q/digital-print-603-37-longwalk-orange-original-imafxj4gyswydntb.jpeg?q=70" alt="" 
+              srcset="https://rukminim1.flixcart.com/image/150/150/khjgeq80-0/shoe/n/c/q/digital-print-603-37-longwalk-orange-original-imafxj4gyswydntb.jpeg?q=70 1x,
+              https://rukminim1.flixcart.com/image/150/150/khjgeq80-0/shoe/n/c/q/digital-print-603-37-longwalk-orange-original-imafxj4gyswydntb.jpeg?q=70 2x"
+                        height="150px">
+              <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+              <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+              <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+              
+            </div>
+            <div class="col-auto tex p-2 pl-4 cursor-pointer">
+              <img src="https://rukminim1.flixcart.com/image/150/150/screwdriver-set/k/q/u/6032-jackly-original-imaee5u4zgbwyjws.jpeg?q=70" alt="" 
+              srcset="https://rukminim1.flixcart.com/image/150/150/screwdriver-set/k/q/u/6032-jackly-original-imaee5u4zgbwyjws.jpeg?q=70 1x,
+              https://rukminim1.flixcart.com/image/150/150/screwdriver-set/k/q/u/6032-jackly-original-imaee5u4zgbwyjws.jpeg?q=70 2x"
+                        height="150px">
+              <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+              <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+              <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
               
             </div>
           </div>
+        </div>
       </div>
-    </nav>
-    <div class="navbar bg-white border-bottom p-0">
-      <div class="container-lg">
-        <div class="col-12 m-auto flex-nowrap d-none d-md-flex row col-form-label-sm position-relative mx-0 justify-content-evenly">
-          <div class="col-auto p-0">
-            <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label " id="electronicsLink" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              Electronics
-            </a>
-            <div class="dropdown-menu p-0 shadow col-12" aria-labelledby="electronicsLink">
-              <div class="col-12 d-flex">
-                <div class="col-3 bg-light p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                     <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                    </li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                      </a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                      </a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-transparent p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-light p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-transparent p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-              </div> 
-            </div>
+      <picture  class="col-auto cursor-pointer d-none d-md-block">
+        <source srcset="https://rukminim1.flixcart.com/flap/464/708/image/59798f0700c56a6c.jpg?q=70 1x,
+                        https://rukminim1.flixcart.com/flap/464/708/image/59798f0700c56a6c.jpg?q=70 2x"> 
+        <img src="https://rukminim1.flixcart.com/flap/464/708/image/59798f0700c56a6c.jpg?q=70" width="240" height="370">
+      </picture>
+    </div>
+  </div>
+  <div class="container-lg mt-2">
+    <div class="row mx-0">
+      <div class="col-md-4 col-sm-6 p-2 shadow cursor-pointer">
+        <img src="https://rukminim1.flixcart.com/flap/480/480/image/b3d17c3c9e41c9d9.jpg?q=50" class="w-100"
+          alt="" srcset="https://rukminim1.flixcart.com/flap/960/960/image/b3d17c3c9e41c9d9.jpg?q=50 2x,
+                          https://rukminim1.flixcart.com/flap/480/480/image/b3d17c3c9e41c9d9.jpg?q=50 1x">
+      </div>
+      <div class="col-md-4 col-sm-6 p-2 shadow cursor-pointer">
+        <img src="https://rukminim1.flixcart.com/flap/480/480/image/d3d5441dd1ececbd.jpg?q=50" alt="" class="w-100"
+        srcset="https://rukminim1.flixcart.com/flap/960/960/image/d3d5441dd1ececbd.jpg?q=50 2x,
+                  https://rukminim1.flixcart.com/flap/480/480/image/d3d5441dd1ececbd.jpg?q=50 1x">
+      </div>
+      <div class="col-md-4 col-sm-6 p-2 shadow cursor-pointer">
+        <img src="https://rukminim1.flixcart.com/flap/480/480/image/c87f61d426d1e31c.jpg?q=50" alt="" class="w-100"
+        srcset="https://rukminim1.flixcart.com/flap/960/960/image/c87f61d426d1e31c.jpg?q=50 2x,
+                  https://rukminim1.flixcart.com/flap/480/480/image/c87f61d426d1e31c.jpg?q=50 1x">
+      </div>
+      <div class="col-md-4 col-sm-6 p-2 shadow cursor-pointer">
+        <img src="https://rukminim1.flixcart.com/flap/480/480/image/af0cd935c76bb915.jpg?q=50" alt="" class="w-100"
+          srcset="https://rukminim1.flixcart.com/flap/960/960/image/af0cd935c76bb915.jpg?q=50 2x,
+                  https://rukminim1.flixcart.com/flap/480/480/image/af0cd935c76bb915.jpg?q=50 1x">
+      </div>
+      <div class="col-md-4 col-sm-6 p-2 shadow cursor-pointer">
+        <img src="https://rukminim1.flixcart.com/flap/960/960/image/6b196870791f16bd.jpg?q=50" alt="" class="w-100"
+        srcset="https://rukminim1.flixcart.com/flap/960/960/image/6b196870791f16bd.jpg?q=50 2x, 
+                https://rukminim1.flixcart.com/flap/480/480/image/6b196870791f16bd.jpg?q=50 1x">
+      </div>
+      <div class="col-md-4 col-sm-6 p-2 shadow cursor-pointer">
+        <img src="https://rukminim1.flixcart.com/flap/960/960/image/b49eae77223a8b2f.jpg?q=50" alt="" class="w-100"
+        srcset="https://rukminim1.flixcart.com/flap/960/960/image/b49eae77223a8b2f.jpg?q=50 2x,
+                https://rukminim1.flixcart.com/flap/480/480/image/b49eae77223a8b2f.jpg?q=50 1x">
+      </div>
+    </div>
+  </div>
+  <div class="container-lg mt-2 ">
+    <div class="card shadow col">
+      <div class="card-body">
+        <div class="card-title d-flex justify-content-between border-bottom pb-3 align-items-center">
+            <h4 class="text-dark col">Discounts for you!</h4>
+            <button type="button" class="btn btn-primary h-100 w-auto">VIEW ALL</button>
+        </div>
+        <div class="row text-center flex-nowrap overflow-auto ">
+          <div class="col-auto tex p-2 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/300/300/kex5ci80/pillow/z/u/h/urban-basics-microfibre-pillow-17-x27-inch-white-set-of-6-6-pic-original-imafvhybhbaheq87.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/300/300/kex5ci80/pillow/z/u/h/urban-basics-microfibre-pillow-17-x27-inch-white-set-of-6-6-pic-original-imafvhybhbaheq87.jpeg?q=70 2x,
+                      https://rukminim1.flixcart.com/image/150/150/kex5ci80/pillow/z/u/h/urban-basics-microfibre-pillow-17-x27-inch-white-set-of-6-6-pic-original-imafvhybhbaheq87.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
           </div>
-          <div class="col-auto pr-0 pl-1">
-            <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label " id="tvAndAppliances" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              TV & Appliances
-            </a>
-            <div class="dropdown-menu p-0 shadow col-12" aria-labelledby="tvAndAppliances">
-              <div class="col-12 d-flex">
-                <div class="col-3 bg-transparent p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                     <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                    </li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                      </a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                      </a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-light p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-transparent p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-light p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-              </div> 
-            </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/300/300/kcf4lu80/ups/r/g/j/600va-ups-pro-luminous-original-imaftjkvjzgpw8pb.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/300/300/kcf4lu80/ups/r/g/j/600va-ups-pro-luminous-original-imaftjkvjzgpw8pb.jpeg?q=70 2x,
+                    https://rukminim1.flixcart.com/image/150/150/kcf4lu80/ups/r/g/j/600va-ups-pro-luminous-original-imaftjkvjzgpw8pb.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
           </div>
-          <div class="col-auto  pr-0 pl-1">
-            <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label " id="menLink" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              Men
-            </a>
-            <div class="dropdown-menu p-0 shadow col-12" aria-labelledby="menLink">
-              <div class="col-12 d-flex">
-                <div class="col-3 bg-light p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                     <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                    </li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                      </a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                      </a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-transparent p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-light p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-transparent p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-              </div> 
-            </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/300/300/jx0prbk0/emergency-light/6/b/w/electric-power-rechargeable-ketsaal-original-imaez8vzsfst9z7p.jpeg?q=70 " alt="" 
+            srcset="https://rukminim1.flixcart.com/image/300/300/jx0prbk0/emergency-light/6/b/w/electric-power-rechargeable-ketsaal-original-imaez8vzsfst9z7p.jpeg?q=70 2x,
+                      https://rukminim1.flixcart.com/image/150/150/jx0prbk0/emergency-light/6/b/w/electric-power-rechargeable-ketsaal-original-imaez8vzsfst9z7p.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
           </div>
-          <div class="col-auto  pr-0 pl-1">
-            <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label " id="womenLink" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              Women
-            </a>
-            <div class="dropdown-menu p-0 shadow col-12" aria-labelledby="womenLink">
-              <div class="col-12 d-flex">
-                <div class="col-3 bg-transparent p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                     <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                    </li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                      </a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                      </a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-light p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-transparent p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-light p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-              </div> 
-            </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/300/300/kc6jyq80/office-study-chair/v/q/r/pp-polypropylene-office-revolving-desk-chair-mbtc-original-imaftd3kngzxhwyn.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/300/300/kc6jyq80/office-study-chair/v/q/r/pp-polypropylene-office-revolving-desk-chair-mbtc-original-imaftd3kngzxhwyn.jpeg?q=70 2x,
+                      https://rukminim1.flixcart.com/image/150/150/kc6jyq80/office-study-chair/v/q/r/pp-polypropylene-office-revolving-desk-chair-mbtc-original-imaftd3kngzxhwyn.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
           </div>
-          <div class="col-auto  pr-0 pl-1">
-            <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label " id="babyLink" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              Baby & Kids
-            </a>
-            <div class="dropdown-menu p-0 shadow col-12" aria-labelledby="babyLink">
-              <div class="col-12 d-flex">
-                <div class="col-3 bg-light p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                     <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                    </li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                      </a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                      </a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-transparent p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-light p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-transparent p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-              </div> 
-            </div>
+          
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/300/300/k6l2vm80/computer-table/z/y/a/mdf-fk-28-limraz-furniture-brown-original-imafzy9ytkbegxg4.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/300/300/k6l2vm80/computer-table/z/y/a/mdf-fk-28-limraz-furniture-brown-original-imafzy9ytkbegxg4.jpeg?q=70 2x,
+                      https://rukminim1.flixcart.com/image/150/150/k6l2vm80/computer-table/z/y/a/mdf-fk-28-limraz-furniture-brown-original-imafzy9ytkbegxg4.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
           </div>
-          <div class="col-auto pr-0 pl-1">
-            <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label " id="furnitureLink" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              Home & furniture
-            </a>
-            <div class="dropdown-menu p-0 shadow col-12" aria-labelledby="furnitureLink">
-              <div class="col-12 d-flex">
-                <div class="col-3 bg-transparent p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                     <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                    </li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                      </a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                      </a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-light p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-transparent p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-light p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-              </div> 
-            </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/300/300/k6i7zww0/cushion-pillow-cover/p/c/h/v4-set-of-2-cg-homes-original-imafhvfehbfvpmd2.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/300/300/k6i7zww0/cushion-pillow-cover/p/c/h/v4-set-of-2-cg-homes-original-imafhvfehbfvpmd2.jpeg?q=70 2x,
+                      https://rukminim1.flixcart.com/image/150/150/k6i7zww0/cushion-pillow-cover/p/c/h/v4-set-of-2-cg-homes-original-imafhvfehbfvpmd2.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
           </div>
-          <div class="col-auto  pr-0 pl-1">
-            <a class="nav-link dropdown-toggle text-dark fw-bold px-0 col-form-label " id="sportsLink" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              Sports & more
-            </a>
-            <div class="dropdown-menu p-0 shadow col-12" aria-labelledby="sportsLink">
-              <div class="col-12 d-flex">
-                <div class="col-3 bg-light p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                     <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                    </li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                      </a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                      </a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                    <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-transparent p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-light p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-                <div class="col-3 bg-transparent p-2">
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="nav-link text-secondary px-0" href="#">Lorem, ipsum.</a>
-                     </li>
-                     <li>
-                       <a href="#" class="nav-link text-secondary px-0">Lorem.</a>
-                     </li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li><a href="#" class="nav-link text-secondary px-0">Lorem, ipsum dolor.
-                       </a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem ipsum dolor sit amet.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem.</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem</a></li>
-                     <li> <a href="#" class="nav-link text-secondary px-0">Lorem, ipsum.</a></li>
-                  </ul>
-                </div>
-              </div> 
-            </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/300/300/kdrpksw0/monitor/c/q/h/d27-20-65f5kac1in-lenovo-original-imafuhpcvgkqwshf.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/300/300/kdrpksw0/monitor/c/q/h/d27-20-65f5kac1in-lenovo-original-imafuhpcvgkqwshf.jpeg?q=70 2x,
+                      https://rukminim1.flixcart.com/image/150/150/kdrpksw0/monitor/c/q/h/d27-20-65f5kac1in-lenovo-original-imafuhpcvgkqwshf.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
           </div>
-          <div class="col-auto  pr-0 pl-1">
-            <a class="nav-link text-dark fw-bold px-0 col-form-label">
-              Flights
-            </a>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/300/300/k4324y80/processor/h/t/3/amd-ryzen-7-2700x-desktop-processor-8-cores-up-to-4-3ghz-20mb-original-imafn2sdcgr2zrru.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/300/300/k4324y80/processor/h/t/3/amd-ryzen-7-2700x-desktop-processor-8-cores-up-to-4-3ghz-20mb-original-imafn2sdcgr2zrru.jpeg?q=70 2x,
+                      https://rukminim1.flixcart.com/image/150/150/k4324y80/processor/h/t/3/amd-ryzen-7-2700x-desktop-processor-8-cores-up-to-4-3ghz-20mb-original-imafn2sdcgr2zrru.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
           </div>
         </div>
       </div>
     </div>
-    <div class="col-12 d-flex flex-nowrap overflow-auto d-md-none p-1 scrollbar-none">
-      <img src="images/allcategroy.jpg" alt="" width="80px" height="80px">
-      <img src="images/offerZone.jpg" alt="" width="80px" height="80px">
-      <img src="images/appliances.jpg" alt="" width="80px" height="80px">
-      <img src="images/elctronics.jpg" alt="" width="80px" height="80px">
-      <img src="images/mobiles.jpg" alt="" width="80px" height="80px">
-      <img src="images/fashion.jpg" alt="" width="80px" height="80px">
-      <img src="images/grocery.jpg" alt="" width="80px" height="80px">
-      <img src="images/toys.jpg" alt="" width="80px" height="80px">
-      <img src="images/beauty.jpg" alt="" width="80px" height="80px">
-      <img src="images/flghts.jpg" alt="" width="80px" height="80px">
-    </div>
-    <div class="container-lg">
-      <div id="carouselControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/carosal-1.jpg" class="d-block w-100" alt="...">
-          </div>
-          <!-- <div class="carousel-item">
-            <img src="images/carosal-2.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="images/carosal-3.jpg" class="d-block w-100" alt="...">
-          </div> -->
-        </div>
-        <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </a>
+  </div>
+  <div class="container-lg mt-2">
+    <div class="row mx-0">
+      <div class="col-xl-3 col-sm-6 p-2 shadow cursor-pointer">
+        <img src="https://rukminim1.flixcart.com/flap/820/335/image/fa01414e99c8338c.jpg?q=50" class="w-100"
+          alt="" srcset="https://rukminim1.flixcart.com/flap/820/335/image/fa01414e99c8338c.jpg?q=50 2x,
+                  https://rukminim1.flixcart.com/flap/820/335/image/fa01414e99c8338c.jpg?q=50 1x">
+      </div>
+      <div class="col-xl-3 col-sm-6 p-2 shadow cursor-pointer">
+        <img src="https://rukminim1.flixcart.com/flap/820/335/image/3330c79a6d9226ad.jpg?q=50" alt="" class="w-100"
+        srcset="https://rukminim1.flixcart.com/flap/820/335/image/3330c79a6d9226ad.jpg?q=50 2x,
+                  https://rukminim1.flixcart.com/flap/820/335/image/3330c79a6d9226ad.jpg?q=50 1x">
+      </div>
+      <div class="col-xl-3 col-sm-6 p-2 shadow cursor-pointer">
+        <img src="https://rukminim1.flixcart.com/flap/820/335/image/ae17f77bfae0e362.jpg?q=50" alt="" class="w-100"
+        srcset="https://rukminim1.flixcart.com/flap/820/335/image/ae17f77bfae0e362.jpg?q=50 2x,
+                https://rukminim1.flixcart.com/flap/820/335/image/ae17f77bfae0e362.jpg?q=50 1x">
+      </div>
+      <div class="col-xl-3 col-sm-6 p-2 shadow cursor-pointer">
+        <img src="https://rukminim1.flixcart.com/flap/820/335/image/f89972a5d3dd41a9.jpg?q=50" alt="" class="w-100"
+          srcset="https://rukminim1.flixcart.com/flap/820/335/image/f89972a5d3dd41a9.jpg?q=50 2x,
+                  https://rukminim1.flixcart.com/flap/820/335/image/f89972a5d3dd41a9.jpg?q=50 1x">
       </div>
     </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog sidebar-dialog">
-        <div class="modal-content sidebar-content">
-          <div class="modal-header bg-primary text-light p-2">
-            <h6 class="modal-title" id="exampleModalLabel">Balaji Sankar</h6>
-            <img src="images/sidebar-logo.webp" width="20px">
+  </div>
+
+  <div class="container-lg mt-2 ">
+    <div class="card shadow col">
+      <div class="card-body">
+        <div class="card-title d-flex justify-content-between border-bottom align-items-center">
+          <div class="col">
+            <h4 class="text-dark">Recommended Items</h4>
+            <p class="text-secondary">Similar to Items You Viewed</p>
           </div>
-          <div class="modal-body p-0">
-            <ul class="list-unstyled p-2 ">
-              <li class="list-item">
-               <a class="nav-link text-secondary px-0" href="#"><i class="fas fa-user-circle pr-2 text-secondary"></i>My Profile</a>
-              </li>
-              <li>
-                <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-comment-alt pr-2 text-secondary"></i>My Chats</a>
-              </li>
-              <hr>
-              <li><a href="#" class="nav-link text-secondary px-0"><i class="fas fa-heart pr-2 text-secondary"></i>More on flipkart
-                <span class="ml-auto badge bg-danger">NEW</span></a></li>
-              <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-bell pr-2 text-secondary"></i>Notification Preference</a></li>
-              <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-briefcase pr-2 text-secondary"></i>Sell on Flipcart</a></li>
-              <hr>
-              <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-question-circle pr-2 text-secondary"></i>24 x 7 Customer service</a></li>
-              <li><a href="#" class="nav-link text-secondary px-0"><i class="fas  fa-cloud-download-alt pr-2 text-secondary"></i>Download App</a></li>
-              <li><a href="#" class="nav-link text-secondary px-0"><i class="fas fa-heart pr-2 text-secondary"></i>More on flipkart
-                <span class="ml-auto badge bg-danger">NEW</span></a></li>
-              <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-bell pr-2 text-secondary"></i>Notification Preference</a></li>
-              <hr>
-              <li> <a href="#" class="nav-link text-secondary px-0">Legal</a></li>
-              <li> <a href="#" class="nav-link text-secondary px-0">Help</a></li>
-              <li> <a href="#" class="nav-link text-secondary px-0">Notification preferances</a></li>
-            </ul>
+            <button type="button" class="btn btn-primary h-100 w-auto">VIEW ALL</button>
+        </div>
+        <div class="row text-center flex-nowrap overflow-auto ">
+          <div class="col-auto tex p-2 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/n/q/f/apple-mxdg2hn-a-original-imafsky7yyhyhqez.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/n/q/f/apple-mxdg2hn-a-original-imafsky7yyhyhqez.jpeg?q=70 2x,
+                    https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/n/q/f/apple-mxdg2hn-a-original-imafsky7yyhyhqez.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/t/n/g/apple-my2h2hn-a-original-imafskf6mp223xqj.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/t/n/g/apple-my2h2hn-a-original-imafskf6mp223xqj.jpeg?q=70 2x,
+                  https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/t/n/g/apple-my2h2hn-a-original-imafskf6mp223xqj.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/312/312/k0lbdzk0pkrrdj/tablet/u/t/e/apple-muu32hn-a-original-imaff847hdfrpxf2.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/312/312/k0lbdzk0pkrrdj/tablet/u/t/e/apple-muu32hn-a-original-imaff847hdfrpxf2.jpeg?q=70 2x,
+                  https://rukminim1.flixcart.com/image/312/312/k0lbdzk0pkrrdj/tablet/u/t/e/apple-muu32hn-a-original-imaff847hdfrpxf2.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/y/x/n/apple-mxaw2hn-a-original-imafskazzxvpnpzh.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/y/x/n/apple-mxaw2hn-a-original-imafskazzxvpnpzh.jpeg?q=70 2x,
+            https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/y/x/n/apple-mxaw2hn-a-original-imafskazzxvpnpzh.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+          
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/n/q/j/samsung-sm-p615nzbainu-original-imafskymvfrx227x.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/n/q/j/samsung-sm-p615nzbainu-original-imafskymvfrx227x.jpeg?q=70 2x,
+            https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/n/q/j/samsung-sm-p615nzbainu-original-imafskymvfrx227x.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/312/312/k5o7r0w0/tablet/q/3/s/lenovo-81h30053in-original-imafzaxn3ybh7ytt.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/312/312/k5o7r0w0/tablet/q/3/s/lenovo-81h30053in-original-imafzaxn3ybh7ytt.jpeg?q=70 2x,
+                    https://rukminim1.flixcart.com/image/312/312/k5o7r0w0/tablet/q/3/s/lenovo-81h30053in-original-imafzaxn3ybh7ytt.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/312/312/ke1pnrk0/tablet/r/z/d/acer-t8-129l-original-imafutmkxmz6uwzv.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/312/312/ke1pnrk0/tablet/r/z/d/acer-t8-129l-original-imafutmkxmz6uwzv.jpeg?q=70 2x,
+                    https://rukminim1.flixcart.com/image/312/312/ke1pnrk0/tablet/r/z/d/acer-t8-129l-original-imafutmkxmz6uwzv.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/312/312/kd7pevk0/tablet/f/m/y/huawei-kobe2-l09b-original-imafu5s8jrqhhgrg.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/312/312/kd7pevk0/tablet/f/m/y/huawei-kobe2-l09b-original-imafu5s8jrqhhgrg.jpeg?q=70 2x,
+            https://rukminim1.flixcart.com/image/312/312/kd7pevk0/tablet/f/m/y/huawei-kobe2-l09b-original-imafu5s8jrqhhgrg.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-lg mt-2">
+    <div class="row mx-0">
+      <div class="col-md-4 p-2 shadow cursor-pointer">
+        <img src="https://rukminim1.flixcart.com/flap/480/480/image/8d3fed8b0bb5ec66.jpg?q=50" class="w-100"
+          alt="" srcset="https://rukminim1.flixcart.com/flap/960/960/image/8d3fed8b0bb5ec66.jpg?q=50 2x,
+                 https://rukminim1.flixcart.com/flap/480/480/image/8d3fed8b0bb5ec66.jpg?q=50 1x">
+      </div>
+      <div class="col-md-4 p-2 shadow cursor-pointer">
+        <img src="https://rukminim1.flixcart.com/flap/960/960/image/ade9c04ff93758e8.jpg?q=50" alt="" class="w-100"
+        srcset="https://rukminim1.flixcart.com/flap/960/960/image/ade9c04ff93758e8.jpg?q=50 2x,
+                 https://rukminim1.flixcart.com/flap/480/480/image/ade9c04ff93758e8.jpg?q=50 1x">
+      </div>
+      <div class="col-md-4 p-2 shadow cursor-pointer">
+        <img src="https://rukminim1.flixcart.com/flap/960/960/image/688fca39ebc3db5f.jpg?q=50" alt="" class="w-100"
+        srcset="https://rukminim1.flixcart.com/flap/960/960/image/688fca39ebc3db5f.jpg?q=50 2x,
+               https://rukminim1.flixcart.com/flap/480/480/image/688fca39ebc3db5f.jpg?q=50 1x">
+      </div>
+    </div>
+  </div>
+
+  <div class="container-lg mt-2 ">
+    <div class="card shadow col">
+      <div class="card-body">
+        <div class="card-title d-flex justify-content-between border-bottom align-items-center pb-4">
+            <h4 class="text-dark">Top Selections</h4>
+            <button type="button" class="btn btn-primary h-100 w-auto">VIEW ALL</button>
+        </div>
+        <div class="row text-center flex-nowrap overflow-auto ">
+          <div class="col-auto tex p-2 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/150/150/kfbfr0w0/mobile/b/k/h/realme-narzo-20-rmx2193-original-imafvswety9jxxsg.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/300/300/kfbfr0w0/mobile/b/k/h/realme-narzo-20-rmx2193-original-imafvswety9jxxsg.jpeg?q=70 2x,
+                       https://rukminim1.flixcart.com/image/150/150/kfbfr0w0/mobile/b/k/h/realme-narzo-20-rmx2193-original-imafvswety9jxxsg.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/t/n/g/apple-my2h2hn-a-original-imafskf6mp223xqj.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/t/n/g/apple-my2h2hn-a-original-imafskf6mp223xqj.jpeg?q=70 2x,
+                  https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/t/n/g/apple-my2h2hn-a-original-imafskf6mp223xqj.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/150/150/jzfvma80/pendrive/pendrive/y/3/f/sandisk-sdcz50-064g-i35-sdcz50-064g-b35-original-imafjgffgz9hgbzy.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/300/300/jzfvma80/pendrive/pendrive/y/3/f/sandisk-sdcz50-064g-i35-sdcz50-064g-b35-original-imafjgffgz9hgbzy.jpeg?q=70 2x,
+                   https://rukminim1.flixcart.com/image/150/150/jzfvma80/pendrive/pendrive/y/3/f/sandisk-sdcz50-064g-i35-sdcz50-064g-b35-original-imafjgffgz9hgbzy.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/y/x/n/apple-mxaw2hn-a-original-imafskazzxvpnpzh.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/y/x/n/apple-mxaw2hn-a-original-imafskazzxvpnpzh.jpeg?q=70 2x,
+            https://rukminim1.flixcart.com/image/312/312/kb5eikw0/tablet/y/x/n/apple-mxaw2hn-a-original-imafskazzxvpnpzh.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+          
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/312/312/kd7pevk0/tablet/f/m/y/huawei-kobe2-l09b-original-imafu5s8jrqhhgrg.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/312/312/kd7pevk0/tablet/f/m/y/huawei-kobe2-l09b-original-imafu5s8jrqhhgrg.jpeg?q=70 2x,
+            https://rukminim1.flixcart.com/image/312/312/kd7pevk0/tablet/f/m/y/huawei-kobe2-l09b-original-imafu5s8jrqhhgrg.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/312/312/k5o7r0w0/tablet/q/3/s/lenovo-81h30053in-original-imafzaxn3ybh7ytt.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/312/312/k5o7r0w0/tablet/q/3/s/lenovo-81h30053in-original-imafzaxn3ybh7ytt.jpeg?q=70 2x,
+                    https://rukminim1.flixcart.com/image/312/312/k5o7r0w0/tablet/q/3/s/lenovo-81h30053in-original-imafzaxn3ybh7ytt.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/150/150/ke7ff680/memory-card/microsdxc/p/x/z/samsung-mb-mc64ha-in-original-imafuxz4kcvxthtz.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/300/300/ke7ff680/memory-card/microsdxc/p/x/z/samsung-mb-mc64ha-in-original-imafuxz4kcvxthtz.jpeg?q=70 2x,
+                   https://rukminim1.flixcart.com/image/150/150/ke7ff680/memory-card/microsdxc/p/x/z/samsung-mb-mc64ha-in-original-imafuxz4kcvxthtz.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+          <div class="col-auto tex p-2 pl-4 cursor-pointer">
+            <img src="https://rukminim1.flixcart.com/image/312/312/kd7pevk0/tablet/f/m/y/huawei-kobe2-l09b-original-imafu5s8jrqhhgrg.jpeg?q=70" alt="" 
+            srcset="https://rukminim1.flixcart.com/image/312/312/kd7pevk0/tablet/f/m/y/huawei-kobe2-l09b-original-imafu5s8jrqhhgrg.jpeg?q=70 2x,
+            https://rukminim1.flixcart.com/image/312/312/kd7pevk0/tablet/f/m/y/huawei-kobe2-l09b-original-imafu5s8jrqhhgrg.jpeg?q=70 1x"
+                      height="150px">
+            <p class="fw-bold mb-1 fs-7">W, Aurelia & more</p>
+            <p class="text-secondary mb-1 fs-7">Under ₹799</p>
+            <p class="text-secondary mb-1 fs-7"> Kurtas & Kurtis</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid pd-1 bg-white mt-5 p-2 p-md-4 shadow text-secondary">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h5 id="flush-headingOne" class="d-md-none">
+          <a class="dropdown-item fs-6 d-flex bg-white" type="button" data-toggle="collapse" data-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <span class="col">Flipkart - Your Online Shopping place</span> <i class="ml-auto fas fa-plus col-auto"></i>
+          </a>
+        </h5>
+        <div id="flush-collapseOne" class="accordion-collapse collapse d-md-block" aria-labelledby="flush-headingOne" data-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <p class="mt-md-5 ">Top Stories: <span class="fw-bold">Brand Directory</span> </p>
+            <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ullam velit minus modi laborum sit nihil dolorem, vel, atque magnam deserunt sed labore, soluta aspernatur voluptatem incidunt quasi est omnis!
+            Nesciunt amet deleniti nisi expedita ad vero eaque beatae repellendus natus nobis sint totam recusandae reiciendis sit exercitationem, iure earum molestiae placeat dolores. Nesciunt eligendi hic asperiores reiciendis assumenda! Blanditiis.
+            Dolor ipsum reiciendis, laboriosam nisi quod est, reprehenderit nesciunt deleniti perferendis hic labore. Maiores qui commodi modi et, iusto magni delectus alias rerum, similique autem laboriosam possimus eaque velit dolore.
+            Laborum aliquam odio, quos molestiae ad natus, corporis illo iure ut voluptates consequuntur neque maxime. Sint nesciunt ex, quae voluptas, amet neque vel repellendus repudiandae esse porro delectus quibusdam? Fugiat!
+            Quaerat odio ullam illo facere cupiditate praesentium, perspiciatis voluptate. Ratione dignissimos quibusdam doloribus perferendis, consequuntur ducimus debitis, fuga pariatur illum amet, provident dicta libero nam odit porro nemo ipsum temporibus?
+            </p>
+            <h6 class="fw-bolder mt-5">Flipkart: The One-stop Shopping Destination</h6>
+            <p class="text-secondary">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti perferendis distinctio tempora atque, maxime modi accusantium odio natus adipisci autem reiciendis ut quis quisquam a illum facere enim nobis ea.Laborum odio repellendus velit sed? Aperiam, ullam, nihil molestias quo modi tempore quos aspernatur, molestiae mollitia quis iusto porro laudantium ipsam cupiditate? Voluptatum harum recusandae modi eaque ducimus, qui voluptate.
+            </p>
+            <h6 class="fw-bolder">Flipkart Plus</h6>
+            <p class="text-secondary">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti perferendis distinctio tempora atque, maxime modi accusantium odio natus adipisci autem reiciendis ut quis quisquam a illum facere enim nobis ea.Laborum odio repellendus velit sed? Aperiam, ullam, nihil molestias quo modi tempore quos aspernatur, molestiae mollitia quis iusto porro laudantium ipsam cupiditate? Voluptatum harum recusandae modi eaque ducimus, qui voluptate.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nesciunt pariatur voluptatem veniam eligendi itaque delectus modi ipsam quas dolore ex, et, unde quaerat error vel ducimus earum omnis. Ducimus!Sit possimus, eligendi odio ipsum dolore fuga nobis explicabo modi beatae aperiam maiores neque exercitationem, cumque tenetur incidunt architecto magni harum iure impedit quis iusto hic libero! Cumque, molestias veritatis!
+            </p>
+            <h6 class="fw-bolder">No Cost EMI</h6>
+            <p class="text-secondary">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti perferendis distinctio tempora atque, maxime modi accusantium odio natus adipisci autem reiciendis ut quis quisquam a illum facere enim nobis ea.Laborum odio repellendus velit sed? Aperiam, ullam, nihil molestias quo modi tempore quos aspernatur, molestiae mollitia quis iusto porro laudantium ipsam cupiditate? Voluptatum harum recusandae modi eaque ducimus, qui voluptate.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nesciunt pariatur voluptatem veniam eligendi itaque delectus modi ipsam quas dolore ex, et, unde quaerat error vel ducimus earum omnis. Ducimus!Sit possimus, eligendi odio ipsum dolore fuga nobis explicabo modi beatae aperiam maiores neque exercitationem, cumque tenetur incidunt architecto magni harum iure impedit quis iusto hic libero! Cumque, molestias veritatis!
+            </p>
+            <h6 class="fw-bolder">EMI on Debit Cards</h6>
+            <p class="text-secondary">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti perferendis distinctio tempora atque, maxime modi accusantium odio natus adipisci autem reiciendis ut quis quisquam a illum facere enim nobis ea.Laborum odio repellendus velit sed? Aperiam, ullam, nihil molestias quo modi tempore quos aspernatur, molestiae mollitia quis iusto porro laudantium ipsam cupiditate? Voluptatum harum recusandae modi eaque ducimus, qui voluptate.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nesciunt pariatur voluptatem veniam eligendi itaque delectus modi ipsam quas dolore ex, et, unde quaerat error vel ducimus earum omnis. Ducimus!Sit possimus, eligendi odio ipsum dolore fuga nobis explicabo modi beatae aperiam maiores neque exercitationem, cumque tenetur incidunt architecto magni harum iure impedit quis iusto hic libero! Cumque, molestias veritatis!
+            </p>
+            <h6 class="fw-bolder">Mobile Exchange Offers</h6>
+            <p class="text-secondary">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti perferendis distinctio tempora atque, maxime modi accusantium odio natus adipisci autem reiciendis ut quis quisquam a illum facere enim nobis ea.Laborum odio repellendus velit sed? Aperiam, ullam, nihil molestias quo modi tempore quos aspernatur, molestiae mollitia quis iusto porro laudantium ipsam cupiditate? Voluptatum harum recusandae modi eaque ducimus, qui voluptate.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nesciunt pariatur voluptatem veniam eligendi itaque delectus modi ipsam quas dolore ex, et, unde quaerat error vel ducimus earum omnis. Ducimus!Sit possimus, eligendi odio ipsum dolore fuga nobis explicabo modi beatae aperiam maiores neque exercitationem, cumque tenetur incidunt architecto magni harum iure impedit quis iusto hic libero! Cumque, molestias veritatis!
+            </p>
           </div>
         </div>
       </div>
     </div>
     
+  </div>
+  <div class="modal fade" id="sidebarModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog sidebar-dialog">
+      <div class="modal-content sidebar-content">
+        <div class="modal-header bg-primary text-light p-2 rounded-0">
+          <h6 class="modal-title" id="exampleModalLabel">Balaji Sankar</h6>
+          <img src="images/sidebar-logo.webp" width="20px">
+        </div>
+        <div class="modal-body p-0">
+          <ul class="list-unstyled p-2 ">
+            <li class="list-item">
+              <a class="nav-link text-secondary px-0" href="#"><i class="fas fa-user-circle pr-2 text-secondary"></i>My Profile</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-comment-alt pr-2 text-secondary"></i>My Chats</a>
+            </li>
+            <hr>
+            <li><a href="#" class="nav-link text-secondary px-0"><i class="fas fa-heart pr-2 text-secondary"></i>More on flipkart
+              <span class="ml-auto badge bg-danger">NEW</span></a></li>
+            <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-bell pr-2 text-secondary"></i>Notification Preference</a></li>
+            <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-briefcase pr-2 text-secondary"></i>Sell on Flipcart</a></li>
+            <hr>
+            <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-question-circle pr-2 text-secondary"></i>24 x 7 Customer service</a></li>
+            <li><a href="#" class="nav-link text-secondary px-0"><i class="fas  fa-cloud-download-alt pr-2 text-secondary"></i>Download App</a></li>
+            <li><a href="#" class="nav-link text-secondary px-0"><i class="fas fa-heart pr-2 text-secondary"></i>More on flipkart
+              <span class="ml-auto badge bg-danger">NEW</span></a></li>
+            <li> <a href="#" class="nav-link text-secondary px-0"><i class="fas fa-bell pr-2 text-secondary"></i>Notification Preference</a></li>
+            <hr>
+            <li> <a href="#" class="nav-link text-secondary px-0">Legal</a></li>
+            <li> <a href="#" class="nav-link text-secondary px-0">Help</a></li>
+            <li> <a href="#" class="nav-link text-secondary px-0">Notification preferances</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
