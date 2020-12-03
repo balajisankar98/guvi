@@ -3341,7 +3341,15 @@ textarea.form-control-lg {
   color: #212529;
   background-color: transparent;
 }
+.link-normal{
+  color: #0d6efd;
+  text-decoration: none;
+}
 
+.link-normal:hover{
+  color: #0a58ca;
+  text-decoration: underline;
+}
 .btn-link {
   font-weight: 400;
   color: #0d6efd;
@@ -7004,6 +7012,11 @@ textarea.form-control-lg {
   padding-left: 3rem !important;
 }
 
+.fs-heading {
+  font-size: calc(2rem + 1.5vw) !important;
+}
+
+
 .fs-1 {
   font-size: calc(1.375rem + 1.5vw) !important;
 }
@@ -7967,6 +7980,12 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 768px) {
+  .border-md-0{
+    border: 0px !important;
+  }
+  .h-md-auto{
+    height: auto !important;
+  }
   .float-md-left {
     float: left !important;
   }
