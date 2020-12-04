@@ -6,6 +6,11 @@
 *{
     font-family: "SFProDisplay";
 }
+
+body{
+    min-width: 330px;
+}
+
 .search-bar{
     position: relative;
 }
