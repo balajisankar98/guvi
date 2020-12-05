@@ -9,6 +9,7 @@
 
 body{
     min-width: 330px;
+    padding-top: 56px;
 }
 
 .search-bar{
@@ -37,6 +38,7 @@ body{
 .hamburger-icon{
     position: relative;
     height: 30px;
+    width: 30px;
     padding: 5px;
     transition: 0.5s transform ease;
 }
@@ -51,9 +53,8 @@ body{
     top:7px;
     background-color: white;
     transform: rotate(0deg);
-    transition: 0.5s all ease;
+    transition: 0.25s transform ease-in-out,0.25s top ease-in-out 0.25s;
 }
-
 .hamburger-icon.collapsed::after{
     position: absolute;
     width: 18px;
@@ -62,7 +63,7 @@ body{
     top:14px;
     background-color: white;
     transform: rotate(0deg);
-    transition: 0.5s all ease;
+    transition: 0.25s transform ease-in-out,0.25s top ease-in-out 0.25s;
 }
 
 .hamburger-icon::before{
@@ -73,7 +74,7 @@ body{
     top:11px;
     background-color: white;
     transform: rotate(45deg);
-    transition: 0.5s all ease;
+    transition: 0.25s top ease-in-out,0.25s transform ease-in-out 0.25s;
 }
 
 .hamburger-icon::after{
@@ -83,109 +84,10 @@ body{
     content: '';
     top:11px;
     background-color: white;
-    transform: rotate(-45deg);
-    transition: 0.5s all ease;
-}
-
-.bg-img{
-    height: 624px;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-position-y: 0px;
+    transform: rotate(-45deg); 
+    transition: 0.25s top ease-in-out,0.25s transform ease-in-out 0.25s;
 }
 
 .bg-white-50{
     background-color: #fbfbfd;
-}
-
-.small-img{
-    height: 580px;
-}
-
-.bg-title{
-    background-image: url("images/tile_large.jpg");
-}
-
-.bg-iphone-12{
-    background-image: url("images/iphone_12_large.jpg");
-}
-
-.bg-iphone-pro-max{
-    background-image: url("images/iphone_12_pro_large.jpg");
-}
-
-.bg-mac-book-air{
-    background-image: url("images/macbook_air_large.jpg");
-}
-
-.bg-mac-book-pro{
-    background-image: url("images/macbook_pro_13_large.jpg");
-}
-
-.bg-ipad-air{
-    background-image: url("images/ipad_air_large.jpg");
-}
-
-.bg-tv{
-    background-image: url("images/tv_large.jpg");
-}
-
-.rotate{
-    transform: rotate(-45deg);
-}
-
-@media (max-width: 767px) {
-    .bg-img{
-        height: 548px;
-    }
-
-    .bg-iphone-pro-max{
-        background-image: url("images/iphone_12_pro_small.jpg");
-    }
-
-    .bg-mac-book-air{
-        background-image: url("images/macbook_air_small.jpg");
-    }
-
-    .bg-iphone-12{
-        background-image: url("images/iphone_12_small.jpg");
-    }
-
-    .bg-title{
-        background-image: url("images/tile_small.jpg");
-    }
-
-    .bg-mac-book-pro{
-        background-image: url("images/macbook_pro_13_small.jpg");
-    }
-
-    .bg-ipad-air{
-        background-image: url("images/ipad_air_small.jpg");
-    }
-
-    .bg-tv{
-        background-image: url("images/tv_medium.jpg");
-    }
-}
-
-@media (max-width: 991px) {
-    .bg-title{
-        background-image: url("images/tile_medium.jpg");
-    }
-
-    .bg-mac-book-pro{
-        background-image: url("images/macbook_pro_13_medium.jpg");
-    }
-
-    .bg-ipad-air{
-        background-image: url("images/ipad_air_medium.jpg");
-    }
-
-    .small-img{
-        height: 490px;
-    }
-
-    .bg-tv{
-        background-image: url("images/tv_small.jpg");
-    }
 }
