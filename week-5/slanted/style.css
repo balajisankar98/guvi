@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Yrsa&display=swap');
+
+*{
+    font-family: 'Yrsa', serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.heading::first-letter{
+    font-family: 'Alex Brush', cursive;
+    font-size: 5rem;
+}
+
+h1{
+    letter-spacing: 5px;
+}
+
+.mt-5{
+    margin-top: 50px;
+}
+
+.p-10{
+    padding: 100px;
+}
+
+.p-5{
+    padding: 50px;
+}
+
+.bg-gray{
+    background-color: #dfe6e9;
+}
+
+.bg-black{
+    background-color: #2d3436;
+    color: white;
+}
+
+.bg-blue{
+    background-color: #6c5ce7;
+}
+
+.bg-yellow{
+    background-color: #ffeaa7;
+}
+
+.bg-pink{
+    background-color: #fd79a8;
+}
+.bg-green{
+    background-color: #81ecec;
+}
+.slanted{
+    position: relative;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.border{
+    position: absolute;
+    content: '';
+    background: transparent;
+    margin: 50px;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    border: 2px solid black;
+}
+
+.slanted::after{
+    position: absolute;
+    content: "";
+    top: 100%;
+    background-color: inherit;
+    height: 50px;
+    transform: skewY(-3deg);
+    width: 100%;
+    left: 0px;
+    z-index: 1;
+}
+
+.slanted::before{
+    position: absolute;
+    content: "";
+    top: 100%;
+    background-color: inherit;
+    height: 50px;
+    width: 100%;
+    left: -50%;
+    z-index: 1;
+}
