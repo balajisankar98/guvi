@@ -51,7 +51,7 @@ text-decoration: underline;
 .relative-image{
     position: relative;
     z-index: -1;
-    transform: translateY(-120px);
+    
 }
 
 @keyframes moveDown {
