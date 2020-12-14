@@ -53,7 +53,7 @@ body{
     top:7px;
     background-color: white;
     transform: rotate(0deg);
-    transition: 0.25s transform ease-in-out,0.25s top ease-in-out 0.25s;
+    transition: 0.25s transform ease-in-out,0.25s top ease-in-out 0.30s;
 }
 .hamburger-icon.collapsed::after{
     position: absolute;
@@ -63,7 +63,7 @@ body{
     top:14px;
     background-color: white;
     transform: rotate(0deg);
-    transition: 0.25s transform ease-in-out,0.25s top ease-in-out 0.25s;
+    transition: 0.25s transform ease-in-out,0.25s top ease-in-out 0.30s;
 }
 
 .hamburger-icon::before{
@@ -74,7 +74,7 @@ body{
     top:11px;
     background-color: white;
     transform: rotate(45deg);
-    transition: 0.25s top ease-in-out,0.25s transform ease-in-out 0.25s;
+    transition: 0.25s top ease-in-out,0.25s transform ease-in-out 0.30s;
 }
 
 .hamburger-icon::after{
@@ -85,7 +85,7 @@ body{
     top:11px;
     background-color: white;
     transform: rotate(-45deg); 
-    transition: 0.25s top ease-in-out,0.25s transform ease-in-out 0.25s;
+    transition: 0.25s top ease-in-out,0.25s transform ease-in-out 0.30s;
 }
 
 .bg-white-50{
