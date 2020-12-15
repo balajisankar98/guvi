@@ -10,7 +10,7 @@
 </head>
 
 <body class="container-fluid bg-info d-flex justify-content-center align-items-center vh-100">
-    <script src="calc.js"></script>
+    
     <div class="col-md-6 col-xl-5 col-12 shadow-lg rounded-3 overflow-hidden">
         <div class="bg-dark col-12 p-4" id="display">
             <h1 id="result" class="col-12 text-right text-white">0</h1>
@@ -23,7 +23,7 @@
                 <button class="operation fs-1 bg-light">-</button>
             </div>
             <div class="col-3 p-0">
-                <button class="operation fs-1 bg-light">x</button>
+                <button class="operation fs-1 bg-light">*</button>
             </div>
             <div class="col-3 p-0">
                 <button class="operation fs-1 bg-light">/</button>
@@ -72,10 +72,17 @@
 
             </div>
             <div class="col-3 p-0 position-relative">
-                <button class="equals bg-danger bg-gradient fs-1"> = </button>
+                <div class="col-12 p-0">
+                    <button class="fs-1 bg-white numbers">CE</button>
+                </div>
+                <div class="col-12 p-0">
+                    <button class="equals bg-danger bg-gradient fs-1"> = </button>
+                </div>
             </div>
         </div>
     </div>
 </body>
 
 </html>
+
+<script src="calc.js"></script>
