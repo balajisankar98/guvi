@@ -1,7 +1,3 @@
-#display{
-    display: flex;
-    align-items: center;
-}
 
 .operation,.numbers{
     width: 100%;
@@ -16,8 +12,17 @@
     background-color: #d3d3d3  !important;
 }
 
+button > * { 
+    pointer-events: none; 
+}
+
 .equals{
     width: 100%;
     position: absolute;
-    height: 76%;
+    height: 50%;
+}
+
+.equals:focus{
+    outline: none;
+    background-color : #ff0019 !important
 }

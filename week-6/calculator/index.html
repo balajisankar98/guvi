@@ -6,77 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../bootstrap-5.0.0-alpha3-dist/css/bootstrap.css">
+    <link rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
+    crossorigin="anonymous"/>
     <title>Document</title>
 </head>
 
 <body class="container-fluid bg-info d-flex justify-content-center align-items-center vh-100">
     
     <div class="col-md-6 col-xl-5 col-12 shadow-lg rounded-3 overflow-hidden">
-        <div class="bg-dark col-12 p-4" id="display">
-            <h1 id="result" class="col-12 text-right text-white">0</h1>
+        <div class="bg-dark col-12 p-4">
+            <p class="col-12  text-right text-white" id="memory"></p>
+            <h1 id="result" class="col-12 text-right text-white" hidden>0</h1>
+            <h1 id="display" class="col-12 text-right text-white">0</h1>
         </div>
         <div class="row m-0">
             <div class="col-3 p-0 ">
-                <button class="operation fs-1 bg-light">+</button>
+                <button class="operation  fs-3 bg-light" value="+"><i class="fal p-2  fa-plus"></i></button>
             </div>
             <div class="col-3 p-0 ">
-                <button class="operation fs-1 bg-light">-</button>
+                <button class="operation fs-3  bg-light" value="-"><i class="fal  p-2  fa-minus"></i></button>
             </div>
             <div class="col-3 p-0">
-                <button class="operation fs-1 bg-light">*</button>
+                <button class="operation fs-3 bg-light" value="*"><i class="fal p-2  fa-times"></i></button>
             </div>
             <div class="col-3 p-0">
-                <button class="operation fs-1 bg-light">/</button>
+                <button class="operation  fs-3 bg-light" value="/"><i class="fal  p-2 fa-divide"></i></button>
             </div>
         </div>
         <div class="row m-0">
             <div class="col-9 p-0">
                 <div class="row m-0">
                     <div class="col-4 p-0 ">
-                        <button class="fs-1 bg-white numbers">1</button>
+                        <button class="fs-1 bg-white numbers" value="1">1</button>
                     </div>
                     <div class="col-4 p-0 ">
-                        <button class="fs-1 bg-white numbers">2</button>
+                        <button class="fs-1 bg-white numbers" value="2">2</button>
                     </div>
                     <div class="col-4 p-0 ">
-                        <button class="fs-1 bg-white numbers">3</button>
+                        <button class="fs-1 bg-white numbers" value="3">3</button>
                     </div>
                     <div class="col-4 p-0 ">
-                        <button class="fs-1 bg-white numbers">4</button>
+                        <button class="fs-1 bg-white numbers" value="4">4</button>
                     </div>
                     <div class="col-4 p-0 ">
-                        <button class="fs-1 bg-white numbers">5</button>
+                        <button class="fs-1 bg-white numbers" value="5">5</button>
                     </div>
                     <div class="col-4 p-0 ">
-                        <button class="fs-1 bg-white numbers">6</button>
+                        <button class="fs-1 bg-white numbers" value="6">6</button>
                     </div>
                     <div class="col-4 p-0 ">
-                        <button class="fs-1 bg-white numbers">7</button>
+                        <button class="fs-1 bg-white numbers" value="7">7</button>
                     </div>
                     <div class="col-4 p-0 ">
-                        <button class="fs-1 bg-white numbers">8</button>
+                        <button class="fs-1 bg-white numbers" value="8">8</button>
                     </div>
                     <div class="col-4 p-0 ">
-                        <button class="fs-1 bg-white numbers">9</button>
+                        <button class="fs-1 bg-white numbers" value="9">9</button>
                     </div>
                     <div class="col-4 p-0 ">
-                        <button class="fs-1 bg-white numbers">0</button>
+                        <button class="fs-1 bg-white numbers" value="0">0</button>
                     </div>
                     <div class="col-4 p-0 ">
-                        <button class="fs-1 bg-white numbers">.</button>
+                        <button class="fs-1 bg-white numbers" value=".">.</button>
                     </div>
                     <div class="col-4 p-0 ">
-                        <button class="fs-1 bg-white numbers">AC</button>
+                        <button class="fs-1 bg-white operation" value="clear">C</button>
                     </div>
                 </div>
 
             </div>
             <div class="col-3 p-0 position-relative">
                 <div class="col-12 p-0">
-                    <button class="fs-1 bg-white numbers">CE</button>
+                    <button class="fs-1 bg-white operation" value="Backspace"><i class="fal fa-backspace"></i></button>
                 </div>
                 <div class="col-12 p-0">
-                    <button class="equals bg-danger bg-gradient fs-1"> = </button>
+                    <button class="fs-1 bg-white operation" value="clearEntry">CE</button>
+                </div>
+                <div class="col-12 p-0">
+                    <button class="equals  bg-danger  operation bg-gradient fs-3" value="="><i class="fal fa-equals p-2"></i></button>
                 </div>
             </div>
         </div>
