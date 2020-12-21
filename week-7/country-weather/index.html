@@ -14,22 +14,22 @@
 <body class="bg-primary">
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
+            <a class="navbar-brand d-flex align-items-center col-12 col-sm-auto justify-content-center justify-content-sm-start" href="#">
                 <i class="far fa-thunderstorm fa-2x pr-3"></i>
                 Weather APP
               </a>
-          <div class="d-flex">
+          <div class="d-flex col-12 col-sm-auto mt-2 m-sm-0">
             <input class="form-control me-2 rounded-0" type="search" placeholder="Search country" id="search" aria-label="Search">
             <button class="btn btn-primary rounded-0" onclick="searchCountry()">Search</button>
           </div>
         </div>
-      </nav>
-    <div class="container">
-        <div class="row mt-5">
+    </nav>
+    <div class="container pt-5 pt-sm-4">
+        <div class="row mt-5 pt-5 pt-sm-0">
               
         </div>
+        <h1 class="mt-5 text-center pt-5 d-none" id="noRecordFound">No records found</h1>
     </div>
-    <h1 class="mt-5 text-center pt-5 d-none" id="noRecordFound">No records found</h1>
 </body>
 </html>
 <script src="script.js"></script>
