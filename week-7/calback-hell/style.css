@@ -1,3 +1,6 @@
+body{
+    transition: 0.5s background ease-in-out;
+}
 h1{
     animation: animemateText 11s normal;
 }
