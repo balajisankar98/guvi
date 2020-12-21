@@ -17,15 +17,15 @@ h1{
 
 @keyframes animemateText {
     0%{
-        font-size: 100vh;
+        font-size: 60vw;
     }
 
     90%{
-        font-size: 50px;
+        font-size: 5vh;
     }
 
     92%{
-        font-size: 30vw;
+        font-size: 33vw;
     }
 
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../bootstrap-5.0.0-alpha3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
+    crossorigin="anonymous"/>
+    <title>Document</title>
+</head>
+<body class="bg-primary">
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="far fa-thunderstorm fa-2x pr-3"></i>
+                Weather APP
+              </a>
+          <div class="d-flex">
+            <input class="form-control me-2 rounded-0" type="search" placeholder="Search country" id="search" aria-label="Search">
+            <button class="btn btn-primary rounded-0" onclick="searchCountry()">Search</button>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="row mt-5">
+              
+        </div>
+    </div>
+    <h1 class="mt-5 text-center pt-5 d-none" id="noRecordFound">No records found</h1>
+</body>
+</html>
+<script src="script.js"></script>

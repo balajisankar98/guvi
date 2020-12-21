@@ -1,0 +1,16 @@
+.countryInfo,
+.weatherInfo{
+    height: 190px;
+}
+
+.weatherInfo{
+    display: none;
+    position: relative;
+}
+
+.back-button{
+    position: absolute;
+    bottom: 13px;
+    right: 43%;
+    margin: auto;
+}
