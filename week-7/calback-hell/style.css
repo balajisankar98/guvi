@@ -1,0 +1,20 @@
+h1{
+    animation: animemateText 11s normal;
+}
+
+@keyframes animemateText {
+    0%{
+        font-size: 350px;
+    }
+
+    90%{
+        font-size: 50px;
+    }
+
+    92%{
+        font-size: 30vw;
+    }
+
+
+
+}
