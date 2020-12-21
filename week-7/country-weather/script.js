@@ -55,7 +55,7 @@ const getWeather = (lat,lng,event) =>{
             weatherInfoFooter.children[0].setAttribute('class',"oader d-flex justify-content-center d-none");
             weatherInfoFooter.children[2].setAttribute('class',"btn btn-primary shadow-lg  back-button");
             weatherInfoFooter.children[1].innerHTML = `<div class="col-12 d-flex align-items-center justify-content-center">
-                                                            <image src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
+                                                            <image src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
                                                             <h1>${data.main.feels_like}<sup>°C</sup></h1>
                                                         </div>
                                                         <div class="col-12 row">
