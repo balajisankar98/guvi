@@ -1,13 +1,23 @@
+
 body{
     transition: 0.5s background ease-in-out;
+    height: 100vh;
+    overflow: hidden;
 }
+
 h1{
     animation: animemateText 11s normal;
+    padding: 0px;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes animemateText {
     0%{
-        font-size: 350px;
+        font-size: 100vh;
     }
 
     90%{
