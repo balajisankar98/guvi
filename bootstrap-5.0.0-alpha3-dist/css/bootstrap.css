@@ -5631,6 +5631,10 @@ textarea.form-control-lg {
   color: #212529;
 }
 
+.pointer-event-none{
+  pointer-events: none;
+}
+
 .carousel {
   position: relative;
 }
