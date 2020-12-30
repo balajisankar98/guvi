@@ -28,21 +28,44 @@ function Quiz(data) {
 
 var questionContainer = document.querySelector('.question-container');
 
+var getURL = function getURL() {
+  var queryString = window.location.search;
+  var urlParams = new URLSearchParams(queryString);
+  var category = urlParams.get("category");
+  var difficulty = urlParams.get("difficulty");
+  var url = "https://opentdb.com/api.php?amount=10&type=multiple";
+
+  if (category != 'any' && category != null) {
+    url += "&category=".concat(category);
+  }
+
+  if (difficulty != 'any' && difficulty != null) {
+    url += "&difficulty=".concat(difficulty);
+  }
+
+  return url;
+};
+
 var requestQuestions = function requestQuestions() {
   var apiResponse, result;
   return regeneratorRuntime.async(function requestQuestions$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          _context.next = 2;
-          return regeneratorRuntime.awrap(fetch("https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=multiple"));
+          document.querySelector('.loader').className = "text-center loader row";
+          document.querySelector('#score_container').classList.toggle('d-none');
+          questionContainer.innerHTML = "";
+          addProgress();
+          questionNoElement.innerHTML = "1";
+          _context.next = 7;
+          return regeneratorRuntime.awrap(fetch(getURL()));
 
-        case 2:
+        case 7:
           apiResponse = _context.sent;
-          _context.next = 5;
+          _context.next = 10;
           return regeneratorRuntime.awrap(apiResponse.json());
 
-        case 5:
+        case 10:
           result = _context.sent;
           result = result.results.map(function (data) {
             var category = data.category,
@@ -59,10 +82,9 @@ var requestQuestions = function requestQuestions() {
             };
           });
           quizData = new Quiz(result);
-          console.log(quizData.getQuestions());
           viewQuiz();
 
-        case 10:
+        case 14:
         case "end":
           return _context.stop();
       }
@@ -71,14 +93,17 @@ var requestQuestions = function requestQuestions() {
 };
 
 var viewQuiz = function viewQuiz() {
+  document.querySelector('.carousel-control-prev').classList.toggle('d-lg-flex');
+  document.querySelector('.carousel-control-next').classList.toggle('d-none');
   document.querySelector('.loader').classList.toggle('d-none');
   document.querySelector('#status_display').classList.toggle('d-none');
+  document.querySelector('#submit-btn').classList.toggle('d-none');
   quizData.getQuestions().forEach(function (data, index) {
-    var questionItem = createElement('div', "w-100 ".concat(index == 0 ? '' : 'd-none'), questionContainer);
+    var questionItem = createElement('div', "w-100 ".concat(index == 0 ? '' : 'right', " position-absolute t-0  animation card shadow p-3  bg-gradient"), questionContainer);
     questionItem.innerHTML = "<h1>".concat(data.question, "</h1>");
     data.incorrect_answers.forEach(function (incorrectAnswer, answerIndex) {
       var answerItem = createElement('div', "row align-items-center m-0 mt-3", questionItem);
-      answerItem.innerHTML = "<span class=\"btn btn-primary col-2 fs-4 rounded-0\">".concat(listStyle[answerIndex], "</span>\n                                    <input type=\"radio\" name=\"question_").concat(index, "\" id=\"q_").concat(index, "_").concat(answerIndex, "\" \n                                    class=\"answers d-none\" value=").concat(incorrectAnswer, " onchange=\"addProgress()\">\n                                    <label class=\"col-10 fs-4 border btn btn-outline-dark\" \n                                     for=\"q_").concat(index, "_").concat(answerIndex, "\">").concat(incorrectAnswer, "</label>");
+      answerItem.innerHTML = "<span class=\"btn btn-dark col-2 d-md-block d-none fs-4 rounded-0\">".concat(listStyle[answerIndex], "</span>\n                                    <input type=\"radio\" name=\"question_").concat(index, "\" id=\"q_").concat(index, "_").concat(answerIndex, "\" \n                                    class=\"answers d-none\" value=\"").concat(answerIndex, "\" onchange=\"addProgress()\">\n                                    <label class=\"col-12 col-md-10 fs-4 border btn btn-outline-dark\" \n                                     for=\"q_").concat(index, "_").concat(answerIndex, "\">").concat(incorrectAnswer, "</label>");
     });
   });
 };
@@ -103,11 +128,11 @@ var previousQuestion = function previousQuestion() {
   var currentPage = quizData.getCurrentPage();
 
   if (currentPage > 0) {
-    questionContainer.children[currentPage].classList.toggle('d-none');
+    questionContainer.children[currentPage].classList.toggle('right');
     quizData.decrementPage();
     currentPage = quizData.getCurrentPage();
-    questionContainer.children[currentPage].classList.toggle('d-none');
-    questionNoElement.innerHTML = "Question ".concat(currentPage + 1);
+    questionContainer.children[currentPage].classList.toggle('left');
+    questionNoElement.innerHTML = "".concat(currentPage + 1);
   }
 };
 
@@ -115,11 +140,11 @@ var nextQuestion = function nextQuestion() {
   var currentPage = quizData.getCurrentPage();
 
   if (currentPage < questionContainer.children.length - 1) {
-    questionContainer.children[currentPage].classList.toggle('d-none');
+    questionContainer.children[currentPage].classList.toggle('left');
     quizData.incrementPage();
     currentPage = quizData.getCurrentPage();
-    questionContainer.children[currentPage].classList.toggle('d-none');
-    questionNoElement.innerHTML = "Question ".concat(currentPage + 1);
+    questionContainer.children[currentPage].classList.toggle('right');
+    questionNoElement.innerHTML = "".concat(currentPage + 1);
   }
 };
 
@@ -128,4 +153,36 @@ var createElement = function createElement(elem, classes, parentElem) {
   createdElement.setAttribute('class', classes);
   parentElem.append(createdElement);
   return createdElement;
+};
+
+var submitAnswers = function submitAnswers() {
+  var answersArr = quizData.getQuestions();
+  var score = 0;
+  document.querySelectorAll(".answers:checked").forEach(function (answer) {
+    var questionNo = answer.id.split('_');
+
+    if (answersArr[+questionNo[1]].incorrect_answers[+answer.value] === answersArr[+questionNo[1]].correct_answer) {
+      score += 2;
+    }
+  });
+  document.querySelector('.carousel-control-prev').classList.toggle('d-lg-flex');
+  document.querySelector('.carousel-control-next').classList.toggle('d-none');
+  document.querySelector('#status_display').classList.toggle('d-none');
+  document.querySelector('#score_container').classList.toggle('d-none');
+  document.querySelector('#submit-btn').classList.toggle('d-none');
+  document.querySelector('#score').innerHTML = score;
+};
+
+var save = function save() {
+  var name = document.getElementById("name").value.replace(/\s+/g, ' ').trim();
+
+  if (name !== '' || name.length < 3) {
+    var alertElem = createElement('div', 'alert alert-warning alert-dismissible fade show', document.querySelector('.container'));
+    console.log(alertElem);
+    alertElem.role = 'alert';
+    alertElem.innerHTML = "<strong>Please!</strong> Enter valid name.\n        <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>";
+    var bsAlert = new bootstrap.Alert(alertElem);
+    console.log(bsAlert);
+    return false;
+  }
 };

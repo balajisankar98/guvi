@@ -3,6 +3,41 @@
     background-color: #212529;
 }
 
-.progress{
-    top: 30px;
+.animation{
+    transition: 0.3s transform ease-in-out
+                ,0.3s opacity ease-in-out;
+
+}
+
+#score_container{
+    margin: 0;
+    position: absolute;
+    top: 350%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+.left{
+    transform: translateX(-400px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.right{
+    transform: translateX(400px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overflow-x-hidden{
+    overflow-x: hidden;
+}
+
+.question-container{
+    height: 600px;
+}
+
+body{
+    min-width: 360px;
 }

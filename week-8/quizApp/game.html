@@ -11,33 +11,60 @@
     <link rel="stylesheet" href="style.css">
     <title>Play Quiz</title>
 </head>
-<body class="bg-info">
-    <section class="container vh-100 d-flex justify-content-center align-items-center position-relative">
-        <div class="text-center loader">
+<body class="bg-dark overflow-x-hidden">
+    <div class="container mt-3">
+        <a href="index.html" class="link-light fs-4 link-normal "><i class="fas fa-home pr-2"></i>Home</a>
+    </div>
+    <section class="container d-flex justify-content-center align-items-center position-relative mt-5 pt-5">
+        <div class="text-center loader row mt-5 pt-5">
             <div class="spinner-border text-light" style="width: 7rem; height: 7rem;" role="status">
                 <span class="visually-hidden">Loading...</span>
             </div>
         </div>
-        <div id="status_display" class="d-none col-12">
-            <div class="progress position-absolute col-12">
-                <div class="progress-bar" role="progressbar" id="progressBar"></div>
-              </div>
-            <h3 id="question_no">Question 1</h3>
-            <div class="question-container col-12">
+        <div id="status_display" class="d-none col-12 p-4">
+            <div class="text-white text-center ">
+                <div class="col-12 d-flex m-0 justify-content-between justify-content-lg-center">
+                    <a href="#" class="d-lg-none" onclick="previousQuestion()">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <h3>Question <span id="question_no">1</span>/10</h3>
+                    <a href="#" class="d-lg-none" onclick="nextQuestion()">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div class="col-12 mt-4">
+                    <div class="m-auto progress col-12">
+                        <div class="progress-bar" role="progressbar" id="progressBar"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="question-container col-12 position-relative mt-5">
             </div>
         </div>
         
         </div>
+        <div id="score_container" >
+            <h1 class="text-center text-danger">Score - <span id="score"></span></h1>
+            <form action="highscores.html" onsubmit="return save()">   
+                <input type="text" id="name" name="name" placeholder="Enter Name" class="form-control" required>
+                <input type="submit" class="btn btn-outline-warning mt-3 w-100 shadow-lg" value="Save">
+            </form>
+            <a class="btn btn-outline-light mt-3 w-100 shadow-lg" onclick="requestQuestions()">Play again</a>
+        </div>
     </section>
-    <a class="carousel-control-prev" href="#" onclick="previousQuestion()" role="button">
+    <div class="text-center position-absolute bottom-0 pb-5 col-12 d-none" id="submit-btn">
+        <a href="#" class="btn btn-outline-warning mt-3 fs-3" onclick="submitAnswers()">Submit</a>
+    </div>
+    <a class="carousel-control-prev d-none " href="#" onclick="previousQuestion()" role="button">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#" onclick="nextQuestion()" role="button">
+    <a class="carousel-control-next d-none " href="#" onclick="nextQuestion()" role="button">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </a>
 </body>
 </html>
+<script src="../../bootstrap-5.0.0-alpha3-dist/js/bootstrap.js"></script>
 <script src="script.js"></script>
     
