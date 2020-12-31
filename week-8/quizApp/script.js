@@ -56,19 +56,19 @@ const requestQuestions = async ()=>{
 
 const viewQuiz = () =>{
     document.querySelector('.carousel-control-prev').classList.toggle('d-lg-flex');
-    document.querySelector('.carousel-control-next').classList.toggle('d-none');
+    document.querySelector('.carousel-control-next').classList.toggle('d-lg-flex');
     document.querySelector('.loader').classList.toggle('d-none');
     document.querySelector('#status_display').classList.toggle('d-none');
     document.querySelector('#submit-btn').classList.toggle('d-none');
     quizData.getQuestions().forEach((data,index)=>{
-        let questionItem = createElement('div',`w-100 ${index == 0 ? '' : 'right'} position-absolute t-0  animation card shadow p-3  bg-gradient`,questionContainer)
-        questionItem.innerHTML = `<h1>${data.question}</h1>`
+        let questionItem = createElement('div',`w-100 ${index == 0 ? '' : 'right d-none'} p-3 animation card shadow bg-gradient`,questionContainer)
+        questionItem.innerHTML = `<h1 class="text-black-50">${data.question}</h1>`
         data.incorrect_answers.forEach((incorrectAnswer,answerIndex)=>{
             let answerItem = createElement('div',`row align-items-center m-0 mt-3`,questionItem);
-            answerItem.innerHTML = `<span class="btn btn-dark col-2 d-md-block d-none fs-4 rounded-0">${listStyle[answerIndex]}</span>
+            answerItem.innerHTML = `<span class="btn btn-primary col-2 d-md-block d-none fs-4 rounded-0">${listStyle[answerIndex]}</span>
                                     <input type="radio" name="question_${index}" id="q_${index}_${answerIndex}" 
                                     class="answers d-none" value="${answerIndex}" onchange="addProgress()">
-                                    <label class="col-12 col-md-10 fs-4 border btn btn-outline-dark" 
+                                    <label class="col-12 col-md-10 fs-4 border btn btn-outline-primary rounded-0" 
                                      for="q_${index}_${answerIndex}">${incorrectAnswer}</label>`
         })
     })
@@ -93,20 +93,30 @@ const previousQuestion = ()=>{
     let currentPage = quizData.getCurrentPage();
     if(currentPage > 0){
         questionContainer.children[currentPage].classList.toggle('right');
+        applyAfterDelay(questionContainer.children[currentPage],'d-none');
         quizData.decrementPage();
         currentPage = quizData.getCurrentPage();
-        questionContainer.children[currentPage].classList.toggle('left');
+        applyAfterDelay(questionContainer.children[currentPage],'d-none');
+        applyAfterDelay(questionContainer.children[currentPage],'left',400);
         questionNoElement.innerHTML = `${currentPage+1}`
     }
+}
+
+const applyAfterDelay = (elem,elemClass,delay = 300)=>{
+    setTimeout(()=>{
+        elem.classList.toggle(elemClass);
+    },delay)
 }
 
 const nextQuestion = ()=>{
     let currentPage = quizData.getCurrentPage();
     if(currentPage < questionContainer.children.length - 1){
         questionContainer.children[currentPage].classList.toggle('left');
+        applyAfterDelay(questionContainer.children[currentPage],'d-none');
         quizData.incrementPage();
         currentPage = quizData.getCurrentPage();
-        questionContainer.children[currentPage].classList.toggle('right');
+        applyAfterDelay(questionContainer.children[currentPage],'d-none');
+        applyAfterDelay(questionContainer.children[currentPage],'right',400);
         questionNoElement.innerHTML = `${currentPage+1}`
     }
 }

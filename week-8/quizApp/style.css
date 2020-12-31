@@ -34,10 +34,6 @@
     overflow-x: hidden;
 }
 
-.question-container{
-    height: 600px;
-}
-
 body{
     min-width: 360px;
 }

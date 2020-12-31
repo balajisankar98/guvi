@@ -94,16 +94,16 @@ var requestQuestions = function requestQuestions() {
 
 var viewQuiz = function viewQuiz() {
   document.querySelector('.carousel-control-prev').classList.toggle('d-lg-flex');
-  document.querySelector('.carousel-control-next').classList.toggle('d-none');
+  document.querySelector('.carousel-control-next').classList.toggle('d-lg-flex');
   document.querySelector('.loader').classList.toggle('d-none');
   document.querySelector('#status_display').classList.toggle('d-none');
   document.querySelector('#submit-btn').classList.toggle('d-none');
   quizData.getQuestions().forEach(function (data, index) {
-    var questionItem = createElement('div', "w-100 ".concat(index == 0 ? '' : 'right', " position-absolute t-0  animation card shadow p-3  bg-gradient"), questionContainer);
-    questionItem.innerHTML = "<h1>".concat(data.question, "</h1>");
+    var questionItem = createElement('div', "w-100 ".concat(index == 0 ? '' : 'right d-none', " p-3 animation card shadow bg-gradient"), questionContainer);
+    questionItem.innerHTML = "<h1 class=\"text-black-50\">".concat(data.question, "</h1>");
     data.incorrect_answers.forEach(function (incorrectAnswer, answerIndex) {
       var answerItem = createElement('div', "row align-items-center m-0 mt-3", questionItem);
-      answerItem.innerHTML = "<span class=\"btn btn-dark col-2 d-md-block d-none fs-4 rounded-0\">".concat(listStyle[answerIndex], "</span>\n                                    <input type=\"radio\" name=\"question_").concat(index, "\" id=\"q_").concat(index, "_").concat(answerIndex, "\" \n                                    class=\"answers d-none\" value=\"").concat(answerIndex, "\" onchange=\"addProgress()\">\n                                    <label class=\"col-12 col-md-10 fs-4 border btn btn-outline-dark\" \n                                     for=\"q_").concat(index, "_").concat(answerIndex, "\">").concat(incorrectAnswer, "</label>");
+      answerItem.innerHTML = "<span class=\"btn btn-primary col-2 d-md-block d-none fs-4 rounded-0\">".concat(listStyle[answerIndex], "</span>\n                                    <input type=\"radio\" name=\"question_").concat(index, "\" id=\"q_").concat(index, "_").concat(answerIndex, "\" \n                                    class=\"answers d-none\" value=\"").concat(answerIndex, "\" onchange=\"addProgress()\">\n                                    <label class=\"col-12 col-md-10 fs-4 border btn btn-outline-primary rounded-0\" \n                                     for=\"q_").concat(index, "_").concat(answerIndex, "\">").concat(incorrectAnswer, "</label>");
     });
   });
 };
@@ -129,11 +129,20 @@ var previousQuestion = function previousQuestion() {
 
   if (currentPage > 0) {
     questionContainer.children[currentPage].classList.toggle('right');
+    applyAfterDelay(questionContainer.children[currentPage], 'd-none');
     quizData.decrementPage();
     currentPage = quizData.getCurrentPage();
-    questionContainer.children[currentPage].classList.toggle('left');
+    applyAfterDelay(questionContainer.children[currentPage], 'd-none');
+    applyAfterDelay(questionContainer.children[currentPage], 'left', 400);
     questionNoElement.innerHTML = "".concat(currentPage + 1);
   }
+};
+
+var applyAfterDelay = function applyAfterDelay(elem, elemClass) {
+  var delay = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 300;
+  setTimeout(function () {
+    elem.classList.toggle(elemClass);
+  }, delay);
 };
 
 var nextQuestion = function nextQuestion() {
@@ -141,9 +150,11 @@ var nextQuestion = function nextQuestion() {
 
   if (currentPage < questionContainer.children.length - 1) {
     questionContainer.children[currentPage].classList.toggle('left');
+    applyAfterDelay(questionContainer.children[currentPage], 'd-none');
     quizData.incrementPage();
     currentPage = quizData.getCurrentPage();
-    questionContainer.children[currentPage].classList.toggle('right');
+    applyAfterDelay(questionContainer.children[currentPage], 'd-none');
+    applyAfterDelay(questionContainer.children[currentPage], 'right', 400);
     questionNoElement.innerHTML = "".concat(currentPage + 1);
   }
 };
