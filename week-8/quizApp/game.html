@@ -44,12 +44,10 @@
         
         </div>
         <div id="score_container" >
-            <h1 class="text-center text-danger">Score - <span id="score"></span></h1>
-            <form action="highscores.html" onsubmit="return save()">   
-                <input type="text" id="name" name="name" placeholder="Enter Name" class="form-control" required>
-                <input type="submit" class="btn btn-outline-warning mt-3 w-100 shadow-lg" value="Save">
-            </form>
+            <h1 class="text-center text-danger" id="highScore"></h1>
+            <h3 class="text-center text-warning" id="score"></h3>
             <a class="btn btn-outline-light mt-3 w-100 shadow-lg" onclick="requestQuestions()">Play again</a>
+            <a href="highscore.html" class="btn btn-outline-warning mt-3 w-100">High scores</a>
         </div>
     </section>
     <div class="text-center  pb-5 col-12 d-none" id="submit-btn">

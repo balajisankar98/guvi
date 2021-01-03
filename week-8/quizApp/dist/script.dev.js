@@ -5,8 +5,17 @@ var listStyle = ['A', 'B', 'C', 'D'];
 var questionNoElement = document.querySelector('#question_no');
 var progressBar = document.querySelector('#progressBar');
 
+var checkIfEmailIdPresent = function checkIfEmailIdPresent() {
+  if (localStorage.getItem("emailId") === null) {
+    window.location = "index.html";
+  }
+};
+
+checkIfEmailIdPresent();
+
 function Quiz(data) {
   var questions = data;
+  var score = 0;
   var currentPage = 0;
 
   this.getQuestions = function () {
@@ -23,6 +32,14 @@ function Quiz(data) {
 
   this.getCurrentPage = function () {
     return currentPage;
+  };
+
+  this.setScore = function (currentScore) {
+    score = currentScore;
+  };
+
+  this.getScore = function () {
+    return score;
   };
 }
 
@@ -108,6 +125,49 @@ var viewQuiz = function viewQuiz() {
   });
 };
 
+var saveData = function saveData() {
+  var email, high_score, response, result;
+  return regeneratorRuntime.async(function saveData$(_context2) {
+    while (1) {
+      switch (_context2.prev = _context2.next) {
+        case 0:
+          email = document.getElementById("name").value;
+          high_score = quizData.getScore();
+          console.log(email, score);
+          _context2.next = 5;
+          return regeneratorRuntime.awrap(fetch("https://5fecbcd6595e420017c2c218.mockapi.io/quiz/score/", {
+            method: 'POST',
+            body: JSON.stringify({
+              email: email,
+              high_score: high_score
+            }),
+            headers: {
+              "Content-type": "application/json; charset=UTF-8"
+            }
+          }));
+
+        case 5:
+          response = _context2.sent;
+          console.log(response);
+          console.log({
+            email: email,
+            high_score: high_score
+          });
+          _context2.next = 10;
+          return regeneratorRuntime.awrap(response.json());
+
+        case 10:
+          result = _context2.sent;
+          console.log(result);
+
+        case 12:
+        case "end":
+          return _context2.stop();
+      }
+    }
+  });
+};
+
 var addProgress = function addProgress() {
   var answeredQuestions = document.querySelectorAll('.answers:checked');
   progressBar.style.width = "".concat(answeredQuestions.length, "0%");
@@ -167,24 +227,127 @@ var createElement = function createElement(elem, classes, parentElem) {
 };
 
 var submitAnswers = function submitAnswers() {
-  var answersArr = quizData.getQuestions();
-  var score = 0;
-  document.querySelectorAll(".answers:checked").forEach(function (answer) {
-    var questionNo = answer.id.split('_');
+  var answersArr, score, dbRecord;
+  return regeneratorRuntime.async(function submitAnswers$(_context3) {
+    while (1) {
+      switch (_context3.prev = _context3.next) {
+        case 0:
+          document.querySelector('.carousel-control-prev').classList.toggle('d-lg-flex');
+          document.querySelector('.carousel-control-next').classList.toggle('d-lg-flex');
+          document.querySelector('#status_display').classList.toggle('d-none');
+          document.querySelector('#submit-btn').classList.toggle('d-none');
+          document.querySelector('.loader').classList.toggle('d-none');
+          answersArr = quizData.getQuestions();
+          score = 0;
+          document.querySelectorAll(".answers:checked").forEach(function (answer) {
+            var questionNo = answer.id.split('_');
 
-    if (answersArr[+questionNo[1]].incorrect_answers[+answer.value] === answersArr[+questionNo[1]].correct_answer) {
-      score += 2;
+            if (answersArr[+questionNo[1]].incorrect_answers[+answer.value] === answersArr[+questionNo[1]].correct_answer) {
+              score += 2;
+            }
+          });
+          _context3.next = 10;
+          return regeneratorRuntime.awrap(getRecord());
+
+        case 10:
+          dbRecord = _context3.sent;
+          quizData.setScore(score);
+          console.log(dbRecord);
+
+          if (dbRecord != null && dbRecord.high_score > score) {
+            document.querySelector('#highScore').innerHTML = "High Score - ".concat(dbRecord.high_score);
+            document.querySelector('#score').innerHTML = "Score - ".concat(score);
+          } else {
+            document.querySelector('#highScore').innerHTML = "High Score - ".concat(score);
+            saveHighScore(dbRecord);
+          }
+
+          document.querySelector('.loader').classList.toggle('d-none');
+          document.querySelector('#score_container').classList.toggle('d-none');
+
+        case 16:
+        case "end":
+          return _context3.stop();
+      }
     }
   });
-  document.querySelector('.carousel-control-prev').classList.toggle('d-lg-flex');
-  document.querySelector('.carousel-control-next').classList.toggle('d-none');
-  document.querySelector('#status_display').classList.toggle('d-none');
-  document.querySelector('#score_container').classList.toggle('d-none');
-  document.querySelector('#submit-btn').classList.toggle('d-none');
-  document.querySelector('#score').innerHTML = score;
+};
+
+var saveHighScore = function saveHighScore(dbRecord) {
+  var email, high_score, response;
+  return regeneratorRuntime.async(function saveHighScore$(_context4) {
+    while (1) {
+      switch (_context4.prev = _context4.next) {
+        case 0:
+          email = localStorage.getItem("emailId");
+          high_score = quizData.getScore();
+          _context4.next = 4;
+          return regeneratorRuntime.awrap(fetch("https://5fecbcd6595e420017c2c218.mockapi.io/quiz/score/".concat(dbRecord != null ? dbRecord.id : ''), {
+            method: "".concat(dbRecord != null ? 'PUT' : 'POST'),
+            body: JSON.stringify({
+              email: email,
+              high_score: high_score
+            }),
+            headers: {
+              "Content-type": "application/json; charset=UTF-8"
+            }
+          }));
+
+        case 4:
+          response = _context4.sent;
+          console.log(response);
+          console.log({
+            email: email,
+            high_score: high_score
+          });
+
+        case 7:
+        case "end":
+          return _context4.stop();
+      }
+    }
+  });
+};
+
+var getRecord = function getRecord() {
+  var emailId, apiResponse, result;
+  return regeneratorRuntime.async(function getRecord$(_context5) {
+    while (1) {
+      switch (_context5.prev = _context5.next) {
+        case 0:
+          emailId = localStorage.getItem("emailId");
+          _context5.next = 3;
+          return regeneratorRuntime.awrap(fetch("https://5fecbcd6595e420017c2c218.mockapi.io/quiz/score?search=".concat(emailId)));
+
+        case 3:
+          apiResponse = _context5.sent;
+          _context5.next = 6;
+          return regeneratorRuntime.awrap(apiResponse.json());
+
+        case 6:
+          result = _context5.sent;
+          console.log(result);
+
+          if (!(result.length > 0)) {
+            _context5.next = 12;
+            break;
+          }
+
+          return _context5.abrupt("return", result[0]);
+
+        case 12:
+          return _context5.abrupt("return", null);
+
+        case 13:
+        case "end":
+          return _context5.stop();
+      }
+    }
+  });
 };
 
 var save = function save() {
+  saveData();
   var name = document.getElementById("name").value.replace(/\s+/g, ' ').trim();
 
   if (name !== '' || name.length < 3) {

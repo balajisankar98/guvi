@@ -10,8 +10,12 @@
 
 <body class="bg-dark text-white">
     <section class="container vh-100 d-flex justify-content-center align-items-center">
-        <form action="game.html">
+        <form action="game.html" onsubmit="return saveEmailId()">
             <h1 class="text-center">Quiz App</h1>
+            <div id="emailIdContainer">
+                <label for="emailId" class="text-left mt-2">Enter email id:</label>
+                <input type="email" id="emailId" name="name" placeholder="Enter emailId" class="form-control" required>
+            </div>
             <label for="category" class="text-left mt-2">Select Category: </label>
             <select name="category" class="form-select  mb-2">
                 <option value="any">Any Category</option>
@@ -48,9 +52,9 @@
                 <option value="hard">Hard</option>
             </select>
             <input type="submit" class="btn btn-outline-warning mt-3 w-100" value="Play">
-            <a href="play.html" class="btn btn-outline-warning mt-3 w-100">High scores</a>
+            <a href="highscore.html" class="btn btn-outline-warning mt-3 w-100">High scores</a>
         </form>
     </section>
 </body>
-
+<script src="index.js"></script>
 </html>
