@@ -36,4 +36,6 @@
 
 body{
     min-width: 360px;
+    background: linear-gradient(rgb(56, 25, 128), rgb(12, 4, 30));
+    height: 100vh;
 }

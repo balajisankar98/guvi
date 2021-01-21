@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="style.css">
     <title>Play Quiz</title>
 </head>
-<body class="bg-dark overflow-x-hidden">
+<body class="overflow-x-hidden">
     <div class="container mt-3">
         <a href="index.html" class="link-light fs-4 link-normal "><i class="fas fa-home pr-2"></i>Home</a>
     </div>
-    <section class="container d-flex justify-content-center align-items-center position-relative mt-5 pt-5">
-        <div class="text-center loader row mt-5 pt-5">
+    <section class="container d-flex justify-content-center align-items-center position-relative pt-5">
+        <div class="text-center loader row ">
             <div class="spinner-border text-light" style="width: 7rem; height: 7rem;" role="status">
                 <span class="visually-hidden">Loading...</span>
             </div>
@@ -44,14 +44,14 @@
         
         </div>
         <div id="score_container" >
-            <h1 class="text-center text-danger" id="highScore"></h1>
-            <h3 class="text-center text-warning" id="score"></h3>
+            <h1 class="text-center text-white" id="highScore"></h1>
+            <h3 class="text-center text-white" id="score"></h3>
             <a class="btn btn-outline-light mt-3 w-100 shadow-lg" onclick="requestQuestions()">Play again</a>
-            <a href="highscore.html" class="btn btn-outline-warning mt-3 w-100">High scores</a>
+            <a href="highscore.html" class="btn btn-outline-light mt-3 w-100">High scores</a>
         </div>
     </section>
     <div class="text-center  pb-5 col-12 d-none" id="submit-btn">
-        <a href="#" class="btn btn-outline-warning mt-3 fs-3" onclick="submitAnswers()">Submit</a>
+        <a href="#" class="btn btn-outline-light mt-3 fs-3" onclick="submitAnswers()">Submit</a>
     </div>
     <a class="carousel-control-prev d-none " href="#" onclick="previousQuestion()" role="button">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

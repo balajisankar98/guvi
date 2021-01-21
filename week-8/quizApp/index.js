@@ -1,5 +1,5 @@
 const saveEmailId = ()=>{
-    if(localStorage.setItem("emailId") === null)
+    if(localStorage.getItem("emailId") === null)
         try{
             let emailId = document.getElementById("emailId").value;
             console.log(emailId);
