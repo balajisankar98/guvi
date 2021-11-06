@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'SFProDisplay';
+    src: url('fonts/sfprodisplay.woff') format('woff');
+}
+
+*{
+    font-family: "SFProDisplay";
+}
+
+body{
+    min-width: 330px;
+    padding-top: 56px;
+}
+
+.search-bar{
+    position: relative;
+}
+.search-bar::before {
+    position: absolute;
+    font-family: 'Font Awesome 5 Pro';
+    top: 7px;
+    left: 20px;
+    content: "\f002";
+    font-weight: 900;
+    color : #6c757d !important;
+    z-index: 4;
+}
+.outline-none:focus{
+    outline: none;
+    outline: -webkit-focus-ring-color none;
+}
+
+.bg-black{
+    background-color: black !important;
+    color: white !important;
+}
+
+.hamburger-icon{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    transition: 0.5s transform ease;
+}
+
+
+
+.hamburger-icon.collapsed::before{
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    content: '';
+    top:7px;
+    background-color: white;
+    transform: rotate(0deg);
+    transition: 0.25s transform ease-in-out,0.25s top ease-in-out 0.30s;
+}
+.hamburger-icon.collapsed::after{
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    content: '';
+    top:14px;
+    background-color: white;
+    transform: rotate(0deg);
+    transition: 0.25s transform ease-in-out,0.25s top ease-in-out 0.30s;
+}
+
+.hamburger-icon::before{
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    content: '';
+    top:11px;
+    background-color: white;
+    transform: rotate(45deg);
+    transition: 0.25s top ease-in-out,0.25s transform ease-in-out 0.30s;
+}
+
+.hamburger-icon::after{
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    content: '';
+    top:11px;
+    background-color: white;
+    transform: rotate(-45deg); 
+    transition: 0.25s top ease-in-out,0.25s transform ease-in-out 0.30s;
+}
+
+.bg-white-50{
+    background-color: #fbfbfd;
+}
+
+.bg-modal-gradient{
+    background: #e52d27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}   
+
+.bg-chart{
+    background-image: url("images/presentation.jpg");
+}
